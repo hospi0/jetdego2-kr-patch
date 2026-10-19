@@ -1,0 +1,22 @@
+#그림	상자	한글	꼴 — 플라이트 로그북 양식(0020_01_002/004/006, 흰 바탕·회색 머리칸)
+0020_01_002	30,101,66,114	이름	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=12
+0020_01_002	278,101,322,114	생일	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=12
+0020_01_002	397,99,415,113	년	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=12
+0020_01_002	458,99,476,113	월	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=12
+0020_01_002	518,99,534,113	일	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=12
+0020_01_002	74,135,118,148	등급	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=12
+0020_01_002	342,135,398,148	비행 시간	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=12
+0020_01_002	27,165,49,286	노⏎선⏎별⏎마⏎일	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=15;lh=22
+0020_01_002	390,185,413,265	기⏎종⏎한⏎정	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=15;lh=19
+0020_01_002	54,326,146,338	총 마일	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=12
+0020_01_004	58,80,218,94	최근 파일럿 운항 기록	fill=#000000;edge=none;shadow=0;erase=fill;align=l;font=b;size=13
+0020_01_004	26,107,136,124	운항일	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0020_01_004	140,107,272,124	운항 노선	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0020_01_004	275,107,338,124	편명	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0020_01_004	341,107,404,124	기종	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0020_01_004	407,107,489,124	획득 마일	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0020_01_004	493,107,616,124	비고	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0020_01_006	156,75,316,92	공항 시나리오 기록	fill=#000000;edge=none;shadow=0;erase=fill;align=l;font=b;size=13
+0020_01_006	92,108,388,125	시나리오 No.	fill=#000000;edge=none;shadow=0;erase=fill;align=l;font=b;size=13;pad=10
+0020_01_006	396,108,468,125	기종	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0020_01_006	474,108,558,125	점수	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13

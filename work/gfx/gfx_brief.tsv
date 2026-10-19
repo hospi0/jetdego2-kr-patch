@@ -1,0 +1,29 @@
+#그림	상자	한글	꼴 — 브리핑 라벨 표(0018_07_000): 일본어 낱말만(영문 그대로)
+0018_07_000	0,1,49,27	이륙	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	112,1,161,27	상승	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	209,1,306,27	지상 활주	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	0,29,49,55	순항	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	191,29,309,55	어프로치	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	0,57,49,83	착륙	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	112,57,210,83	상공 대기	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	271,57,322,83	주기	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	0,84,119,111	해프닝	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	200,84,297,111	수평 비행	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	0,113,49,139	선회	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	94,113,186,139	트러블	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	247,113,297,139	훈련	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	0,141,97,166	기본 조작	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	199,141,296,166	공중 조작	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	0,169,49,193	기상	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	127,169,200,193	난이도	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=22
+0018_07_000	0,197,57,216	난이도	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=18
+0018_07_000	57,197,96,216	시각	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=18
+0018_07_000	96,197,136,216	날씨	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=18
+0018_07_000	136,197,211,216	제한 시간	fill=#ececf4;edge=none;shadow=0;erase=clear;align=l;size=18
+0018_07_000	223,197,245,216	분	fill=#ececf4;edge=none;shadow=0;erase=clear;align=c;size=18
+0018_07_000	247,197,269,216	맑음	fill=#ececf4;edge=none;shadow=0;erase=clear;align=c;size=18
+0018_07_000	271,197,293,216	흐림	fill=#ececf4;edge=none;shadow=0;erase=clear;align=c;size=18
+0018_07_000	295,197,317,216	비	fill=#ececf4;edge=none;shadow=0;erase=clear;align=c;size=18
+0018_07_000	319,197,341,216	눈	fill=#ececf4;edge=none;shadow=0;erase=clear;align=c;size=18
+0018_07_000	343,197,365,216	안개	fill=#ececf4;edge=none;shadow=0;erase=clear;align=c;size=18
+0018_07_000	367,197,389,216	뇌우	fill=#ececf4;edge=none;shadow=0;erase=clear;align=c;size=18

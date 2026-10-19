@@ -106,6 +106,10 @@ def render(img, box, text, st):
     out = img.copy()
     if st['erase'] == 'clear':
         out[y0:y1, x0:x1] = 0
+    elif st['erase'] == 'fill':                         # 단색 칸: 상자 안 가장 흔한 색으로 칠함
+        reg = out[y0:y1, x0:x1].reshape(-1, 4)
+        vals, cnt = np.unique(reg, axis=0, return_counts=True)
+        out[y0:y1, x0:x1] = vals[cnt.argmax()]
     else:
         import cv2
         rgb = np.ascontiguousarray(out[..., :3]); mask = np.zeros(rgb.shape[:2], np.uint8)
@@ -115,24 +119,16 @@ def render(img, box, text, st):
             m = np.zeros(rgb.shape[:2], np.uint8); m[y0:y1, x0:x1] = (diff[y0:y1, x0:x1] > int(st.get('th', '70'))) * 255
             mask = cv2.dilate(m, np.ones((5, 5), np.uint8))
             mask[:y0] = 0; mask[y1:] = 0; mask[:, :x0] = 0; mask[:, x1:] = 0
+        elif st['erase'] == 'bright':                   # 밝은 글자(흰 글씨)만 — 어두운 사진 바탕
+            lum = rgb.astype(int).sum(-1) // 3
+            m = np.zeros(rgb.shape[:2], np.uint8); m[y0:y1, x0:x1] = (lum[y0:y1, x0:x1] > int(st.get('th', '140'))) * 255
+            mask = cv2.dilate(m, np.ones((5, 5), np.uint8))
+            mask[:y0] = 0; mask[y1:] = 0; mask[:, :x0] = 0; mask[:, x1:] = 0
         else:                                           # inpaint_box: 상자 통째
             mask[y0:y1, x0:x1] = 255
         rgb = cv2.inpaint(rgb, mask, 7, cv2.INPAINT_TELEA); out[..., :3] = rgb
     # 글자
-    S = 4; size = int(st['size']) or int(H * 0.82)
-    font = ImageFont.truetype(FONTS[st['font']], size * S)
-    pad = int(st['pad'])
-    lay = Image.new('L', (W * S, H * S)); d = ImageDraw.Draw(lay)
-    bb = d.textbbox((0, 0), text, font=font); tw, th = bb[2] - bb[0], bb[3] - bb[1]
-    if tw > (W - 2 * pad - 4) * S:                      # 상자 넘치면 가로만 줄임
-        font = ImageFont.truetype(FONTS[st['font']], int(size * S * (W - 2 * pad - 4) * S / tw))
-        bb = d.textbbox((0, 0), text, font=font); tw, th = bb[2] - bb[0], bb[3] - bb[1]
-    ax = {'l': pad * S + 2 * S, 'c': (W * S - tw) // 2, 'r': W * S - tw - pad * S - 2 * S}[st['align']]
-    d.text((ax - bb[0], (H * S - th) // 2 - bb[1]), text, 255, font=font)
-    sl = float(st['slant'])
-    if sl:
-        lay = lay.transform(lay.size, Image.AFFINE, (1, sl, -sl * H * S / 2, 0, 1, 0), Image.BICUBIC)
-    core = np.asarray(lay.resize((W, H), Image.LANCZOS), np.float32) / 255
+    core, core2 = layout(W, H, text, st, both=True)
     a = np.zeros((H, W, 4), np.float32)
     if st['shadow'] == '1':
         sh = np.roll(np.roll(core, 2, 0), 2, 1)
@@ -142,12 +138,52 @@ def render(img, box, text, st):
         ring = np.asarray(Image.fromarray((core * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(3)), np.float32) / 255
         a = comp(a, edge, ring)
     a = comp(a, fill, core)
+    if core2.any():                                   # {…} 강조색
+        a = comp(a, hexc(st.get('fill2', '#40c080')), core2)
     base = out[y0:y1, x0:x1].astype(np.float32)
     al = a[..., 3:4]
     rgb = a[..., :3] * al + base[..., :3] * (1 - al)
     alpha = np.maximum(base[..., 3:4], al * 255)
     out[y0:y1, x0:x1] = np.concatenate([rgb, alpha], -1).clip(0, 255).astype(np.uint8)
     return out
+
+
+def layout(W, H, text, st, both=False):
+    """상자 W×H 에 글자 그린 0‥1 배열 — ⏎ 줄바꿈(줄 간격 lh px), 넘치면 가로만 줄임, 세로 가운데. {…} = 강조(both=True 면 강조 글자만 따로)"""
+    S = 4; lines = text.split('⏎'); n = len(lines)
+    lay2 = Image.new('L', (W * S, H * S)); d2 = ImageDraw.Draw(lay2)
+    lh = int(st.get('lh', '0')) or H // n
+    size = int(st['size']) or int(lh * 0.82); pad = int(st['pad'])
+    lay = Image.new('L', (W * S, H * S)); d = ImageDraw.Draw(lay)
+    top = (H - lh * n) * S // 2
+    for i, raw in enumerate(lines):
+        ln = raw.replace('{', '').replace('}', '')
+        font = ImageFont.truetype(FONTS[st['font']], size * S)
+        bb = d.textbbox((0, 0), ln, font=font); tw = bb[2] - bb[0]
+        if tw > (W - 2 * pad - 4) * S:                  # 상자 넘치면 가로만 줄임
+            tmp = Image.new('L', (tw + 8 * S, lh * S)); dt = ImageDraw.Draw(tmp)
+            asc, desc = font.getmetrics()
+            dt.text((4 * S - bb[0], (lh * S - (asc + desc)) // 2), ln, 255, font=font)
+            tmp = tmp.resize(((W - 2 * pad - 4) * S, lh * S), Image.LANCZOS)
+            lay.paste(tmp, ((pad + 2) * S, top + i * lh * S), tmp); continue
+        ax = {'l': pad * S + 2 * S, 'c': (W * S - tw) // 2, 'r': W * S - tw - pad * S - 2 * S}[st['align']]
+        asc, desc = font.getmetrics()
+        yy = top + i * lh * S + (lh * S - (asc + desc)) // 2
+        d.text((ax - bb[0], yy), ln, 255, font=font)
+        pre = ''; hi = False; seg = ''
+        for ch in raw + '{':                          # 강조 조각만 lay2 에
+            if ch in '{}':
+                if hi and seg: d2.text((ax - bb[0] + font.getlength(pre), yy), seg, 255, font=font)
+                pre += seg; seg = ''; hi = ch == '{'
+            else:
+                seg += ch
+    sl = float(st['slant'])
+    if sl:
+        lay = lay.transform(lay.size, Image.AFFINE, (1, sl, -sl * H * S / 2, 0, 1, 0), Image.BICUBIC)
+    core = np.asarray(lay.resize((W, H), Image.LANCZOS), np.float32) / 255
+    if both:
+        return core, np.asarray(lay2.resize((W, H), Image.LANCZOS), np.float32) / 255
+    return core
 
 
 def render_idx(idx, box, text, st):
@@ -201,7 +237,12 @@ def quantize(img, pal, box, idx):
 
 def jobs():
     """→ {(블록, 항목): 새 bytes}, 미리보기 목록"""
-    rows = [l.rstrip('\n').split('\t') for l in open(SPEC, encoding='utf-8') if l.strip() and not l.startswith('#')]
+    import glob, re
+    rows = [l.rstrip('\n').split('\t') for p in sorted(glob.glob(os.path.join(ROOT, 'work', 'gfx', 'gfx*.tsv')))
+            for l in open(p, encoding='utf-8') if l.strip() and not l.startswith('#')]
+    P = ',.!?:;)\'"~、。，．！？：；）」』】〉》”’…‥・·～〜♪♥'
+    for r in rows:                                  # 문장부호 뒤 공백 지움(전 프로젝트 규칙)
+        r[2] = re.sub('([' + re.escape(P) + '])[ 　]+', lambda m: m.group(1), r[2])
     out = {}; prev = []
     for r in rows:
         name, boxs, text = r[0], r[1], r[2]; st = parse_style(r[3] if len(r) > 3 else '')

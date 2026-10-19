@@ -66,3 +66,8 @@
 0054_01_018	4,4,154,29	끝	fill=auto;edge=none;shadow=0;size=22
 0054_01_020	78,3,166,29	남성	fill=auto;edge=auto;shadow=0;size=24;align=c
 0054_01_022	72,3,166,29	여성	fill=auto;edge=auto;shadow=0;size=24;align=c
+#앨범·영상·공항 안내 띠(0017_10_*) · 자유 비행 안내 배너(0017_01_022)
+0017_10_000	266,6,446,44	일본항공의 역사	fill=#5a2a6a;edge=#f0eaf8;shadow=1;erase=inpaint;align=c;size=24
+0017_10_002	296,6,416,46	영상	fill=#5a2a6a;edge=#f0eaf8;shadow=1;erase=inpaint;align=c;size=26
+0017_10_004	296,6,416,46	공항 안내	fill=#5a2a6a;edge=#f0eaf8;shadow=1;erase=inpaint;align=c;size=26
+0017_01_022	20,0,630,62	프리 크루즈 모드에서는 안전하고 쾌적한 비행을 위해⏎이륙 후 {15000피트 이상}으로 상승해 주세요.	fill=#d8d8d8;fill2=#40c080;edge=none;shadow=0;erase=bright;th=90;align=l;font=b;size=17;lh=30

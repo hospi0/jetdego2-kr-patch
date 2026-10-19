@@ -1,0 +1,33 @@
+#그림	상자	한글	꼴 — 옵션 화면 라벨 아틀라스(0017_09_000). 라벨마다 원래 덩어리 상자 안. 영문·버튼 이름은 그대로
+0017_09_000	158,0,416,30	스크린 조정	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=c;size=26
+0017_09_000	475,0,595,26	카메라 ZOOM IN	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=18
+0017_09_000	207,33,364,65	컨트롤러	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=c;size=26
+0017_09_000	460,35,539,62	러더 왼쪽	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=18
+0017_09_000	196,68,381,100	사운드 테스트	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=c;size=26
+0017_09_000	465,68,602,95	카메라 ZOOM OUT	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=18
+0017_09_000	166,100,404,133	플라이트 로그북	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=c;size=26
+0017_09_000	466,102,551,129	러더 오른쪽	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=18
+0017_09_000	558,103,638,130	방향키	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=18
+0017_09_000	206,134,393,169	저장 / 불러오기	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=c;size=26
+0017_09_000	440,136,554,163	기수 내림	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	440,170,554,197	기수 올림	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	166,171,337,199	플라이트 로그북	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	181,204,303,232	사운드 모드	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	450,207,513,234	왼쪽 선회	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=18
+0017_09_000	181,237,299,265	BGM 번호	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	450,241,513,268	오른쪽 선회	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=18
+0017_09_000	181,271,283,299	SE 번호	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	486,271,549,298	일시정지	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=18
+0017_09_000	180,305,309,333	BGM 볼륨	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	485,306,599,333	시점 전환	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	180,339,293,367	SE 볼륨	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	447,343,595,370	액션 버튼	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	184,373,304,401	키 설정	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	449,377,528,405	플랩	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	183,408,357,436	캘리브레이션	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	457,410,604,438	플랩 DOWN	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	182,441,240,468	불러오기	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=18
+0017_09_000	265,445,396,472	추력 레버	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	452,444,531,472	브레이크	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	179,474,242,503	저장	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
+0017_09_000	444,475,553,504	자동 저장	fill=#ffffff;edge=#1a1a50;shadow=1;erase=clear;align=l;size=20
