@@ -104,7 +104,9 @@ def render(img, box, text, st):
         edge = None if st['edge'] == 'none' else hexc(st['edge'])
     # 지우기
     out = img.copy()
-    if st['erase'] == 'clear':
+    if st['erase'] == 'none':
+        pass
+    elif st['erase'] == 'clear':
         out[y0:y1, x0:x1] = 0
     elif st['erase'] == 'fill':                         # 단색 칸: 상자 안 가장 흔한 색으로 칠함
         reg = out[y0:y1, x0:x1].reshape(-1, 4)
@@ -119,11 +121,37 @@ def render(img, box, text, st):
             m = np.zeros(rgb.shape[:2], np.uint8); m[y0:y1, x0:x1] = (diff[y0:y1, x0:x1] > int(st.get('th', '70'))) * 255
             mask = cv2.dilate(m, np.ones((5, 5), np.uint8))
             mask[:y0] = 0; mask[y1:] = 0; mask[:, :x0] = 0; mask[:, x1:] = 0
+        elif st['erase'] == 'color':                    # 지정 색(들) 가까운 화소만 — 캐릭터 겹친 장식 글자
+            cols = [hexc(c) for c in st['ecol'].split(',')]
+            sub = rgb.astype(int)
+            hit = np.zeros(rgb.shape[:2], bool)
+            for c in cols:
+                hit |= np.abs(sub - np.array(c)).sum(-1) < int(st.get('th', '90'))
+            m = np.zeros(rgb.shape[:2], np.uint8); m[y0:y1, x0:x1] = hit[y0:y1, x0:x1] * 255
+            mask = cv2.dilate(m, np.ones((5, 5), np.uint8))
+            mask[:y0] = 0; mask[y1:] = 0; mask[:, :x0] = 0; mask[:, x1:] = 0
         elif st['erase'] == 'bright':                   # 밝은 글자(흰 글씨)만 — 어두운 사진 바탕
             lum = rgb.astype(int).sum(-1) // 3
             m = np.zeros(rgb.shape[:2], np.uint8); m[y0:y1, x0:x1] = (lum[y0:y1, x0:x1] > int(st.get('th', '140'))) * 255
             mask = cv2.dilate(m, np.ones((5, 5), np.uint8))
             mask[:y0] = 0; mask[y1:] = 0; mask[:, :x0] = 0; mask[:, x1:] = 0
+        elif st['erase'] == 'boxes':                    # 여러 상자를 한 번에(따로 지우면 남은 옛 글자가 번져 들어옴) + 그 안 지정 색만 쓰는 상자(cbox)
+            for b in st['boxes'].split('|'):
+                up = b.startswith('U')                  # U… = 위쪽 줄(바탕) 늘여 채움 — 아래가 머리카락 등 같은 색이라 인페인팅이 번질 때
+                bx0, by0, bx1, by1 = map(int, b.lstrip('U').split(','))
+                if up:
+                    rgb[by0:by1, bx0:bx1] = rgb[by0 - 1:by0, bx0:bx1]
+                    rgb[by0:by1, bx0:bx1] = cv2.GaussianBlur(rgb, (0, 0), 2)[by0:by1, bx0:bx1]
+                else:
+                    mask[by0:by1, bx0:bx1] = 255
+            if st.get('cbox'):
+                cx0, cy0, cx1, cy1 = map(int, st['cbox'].split(','))
+                sub = rgb.astype(int)
+                hit = np.zeros(rgb.shape[:2], bool)
+                for c in st['ecol'].split(','):
+                    hit |= np.abs(sub - np.array(hexc(c))).sum(-1) < int(st.get('th', '100'))
+                mm = np.zeros(rgb.shape[:2], np.uint8); mm[cy0:cy1, cx0:cx1] = hit[cy0:cy1, cx0:cx1] * 255
+                mask |= cv2.dilate(mm, np.ones((5, 5), np.uint8))
         else:                                           # inpaint_box: 상자 통째
             mask[y0:y1, x0:x1] = 255
         rgb = cv2.inpaint(rgb, mask, 7, cv2.INPAINT_TELEA); out[..., :3] = rgb
@@ -145,7 +173,20 @@ def render(img, box, text, st):
     rgb = a[..., :3] * al + base[..., :3] * (1 - al)
     alpha = np.maximum(base[..., 3:4], al * 255)
     out[y0:y1, x0:x1] = np.concatenate([rgb, alpha], -1).clip(0, 255).astype(np.uint8)
+    if st.get('keep'):                                  # 앞에 있던 물체(캐릭터)는 원본 화소로 되돌림: keep 상자 안 + 글자색(kcol)에서 먼 화소
+        kx0, ky0, kx1, ky1 = map(int, st['keep'].split(','))
+        orig = img[ky0:ky1, kx0:kx1].astype(int)
+        far = np.ones(orig.shape[:2], bool)
+        for c in st['kcol'].split(','):
+            far &= np.abs(orig[..., :3] - np.array(hexc(c))).sum(-1) > int(st.get('kth', '120'))
+        far = cv2_erode(far)
+        out[ky0:ky1, kx0:kx1][far] = img[ky0:ky1, kx0:kx1][far]
     return out
+
+
+def cv2_erode(m):
+    import cv2
+    return cv2.morphologyEx(m.astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8)).astype(bool)
 
 
 def layout(W, H, text, st, both=False):
@@ -273,7 +314,11 @@ def jobs():
             idx2 = render_idx(idx.copy(), box, text, st)
         else:
             new = render(img, box, text, st)
-            idx2 = quantize(new, pal, box, idx.copy())
+            ub = list(box)                              # 지운 상자까지 합쳐 다시 색인화(그리기 상자 밖 지움이 버려지지 않게)
+            for b in (st.get('boxes', '').split('|') if st.get('boxes') else []) + ([st['cbox']] if st.get('cbox') else []):
+                bb = list(map(int, b.lstrip('U').split(',')))
+                ub = [min(ub[0], bb[0]), min(ub[1], bb[1]), max(ub[2], bb[2]), max(ub[3], bb[3])]
+            idx2 = quantize(new, pal, tuple(ub), idx.copy())
         out[(k, j)] = store(d, u, idx2)
         prev.append((name, img, pal[idx2]))
     return out, prev
