@@ -8,6 +8,7 @@ import os, struct, glob, collections
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ELF = os.path.join(ROOT, 'work', 'SLPM_651.08')
 VA0, FO0 = 0x100000, 0x80
+NL = 0x401A                     # 줄바꿈 제어 코드(쪽 4)
 
 
 def sheets():
@@ -26,12 +27,12 @@ def records(e=None):
     N = len(e) // 2; a = struct.unpack('<%dH' % N, e[:N * 2]); i = FO0 // 2; out = []
     while i < N - 2:
         w = a[i]; hit = None
-        for G in (26, 32, 24, 20, 22, 28, 30, 16, 18):
+        for G in (26,):                        # 다른 폭은 우연 일치뿐(2026-10-20)
             if w and w % G == 0:
                 n = w // G
                 if 1 <= n <= 200 and i + n < N:
                     cs = a[i + 1:i + 1 + n]
-                    if cs[-1] & 0x8000 and all(not c & 0x8000 and c < 0x200 for c in cs[:-1]) and (cs[-1] & 0x7FFF) < 0x200:
+                    if cs[-1] & 0x8000 and all(not c & 0x8E00 for c in cs[:-1]) and not (cs[-1] & 0x0E00):
                         hit = (i * 2, G, [c & 0x7FFF for c in cs]); break
         if hit:
             out.append(hit); i += len(hit[2]) + 1
@@ -43,7 +44,7 @@ def records(e=None):
 def clusters(recs):
     cl = []
     for o, G, cs in recs:
-        if cl and o - cl[-1][-1][0] - 2 * (len(cl[-1][-1][2]) + 1) < 96 and cl[-1][-1][1] == G:
+        if cl and o - cl[-1][-1][0] - 2 * (len(cl[-1][-1][2]) + 1) < 40 and cl[-1][-1][1] == G:
             cl[-1].append((o, G, cs))
         else:
             cl.append([(o, G, cs)])
@@ -59,24 +60,38 @@ def score(t):
     return sum(t.count(w) * len(w) for w in COMMON) + t.count('。') * 2 - t.count('□') * 3
 
 
+def decode(cs, combo, S):
+    """칸 번호(쪽 비트 12‥14) → 판독 글자. combo = {쪽: 시트}"""
+    out = []
+    for c in cs:
+        if c == NL:
+            out.append('⏎'); continue
+        pg, k = (c >> 12) & 7, c & 0x1FF
+        m = S.get(combo.get(pg), ({},))[0]
+        out.append(m.get(k) or '□')
+    return ''.join(out)
+
+
 def best_sheet(cl, S):
+    """묶음 하나 = 시트 하나(쪽 비트 0x1000·0x2000 = 색 속성, 0x401A = 줄바꿈) → [(점수, {쪽: 시트})]"""
+    ks = {c & 0x1FF for _, _, cs in cl for c in cs if c != NL}
+    pages = sorted({(c >> 12) & 7 for _, _, cs in cl for c in cs if c != NL})
     res = []
-    for name, (m, cols, rows) in S.items():
-        if any((c >> 5) >= cols or (c & 31) >= rows for _, _, cs in cl for c in cs):
-            continue
-        t = ''.join(''.join(m.get(c) or '□' for c in cs) for _, _, cs in cl)
-        res.append((score(t) / max(1, len(t)), name))
-    res.sort(reverse=True)
-    return res or [(0, '?')]
+    for n, (m, cols, rows) in S.items():
+        if not all((k >> 5) < cols and (k & 31) < rows for k in ks): continue
+        cb = {p: n for p in pages}
+        t = ''.join(decode(cs, cb, S) for _, _, cs in cl)
+        res.append((score(t) / max(1, len(t)), cb))
+    res.sort(key=lambda x: -x[0])
+    return res or [(0, {})]
 
 
 if __name__ == '__main__':
     S = sheets(); recs = records(); cls = clusters(recs)
     with open(os.path.join(ROOT, 'work', 'msgs.tsv'), 'w', encoding='utf-8') as f:
         for cl in cls:
-            bs = best_sheet(cl, S); name = bs[0][1]; m = S.get(name, ({},))[0]
-            amb = ','.join('%s:%.2f' % (n, s) for s, n in bs[:3])
+            bs = best_sheet(cl, S); sc, cb = bs[0]
+            name = '+'.join('%d=%s' % kv for kv in sorted(cb.items()))      # 쪽=시트
             for o, G, cs in cl:
-                t = ''.join(m.get(c) or '□' for c in cs)
-                f.write('%06X\t%d\t%d\t%s\t%s\t%s\n' % (o, G, len(cs), name, t, amb))
+                f.write('%06X\t%d\t%d\t%s\t%s\t%.2f\n' % (o, G, len(cs), name, decode(cs, cb, S), sc))
     print('기록', len(recs), '묶음', len(cls))

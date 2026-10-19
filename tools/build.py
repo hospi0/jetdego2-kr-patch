@@ -25,6 +25,7 @@ KEEP = set('△〇０１２３４５６７８９ＡＢＣＤＥＦＧＨＩＪ�
 OCR_FIX = {'亅': '１', 'ｌ': 'Ｉ', 'Ο': 'Ｏ', 'Ε': 'Ｅ'}
 FW = {chr(c): chr(c + 0xFEE0) for c in range(0x21, 0x7F)}
 ERR = []
+NL = 0x401A                                   # 줄바꿈 제어 코드
 INPLACE = {'年': '년', '月': '월', '日': '일'}   # 반각 → 전각(보존 칸 찾기용)
 
 
@@ -77,7 +78,14 @@ def glyph_cell(ch, font):
     """32×32 4비트 칸: 글자 몸 8·B·D·E·F, 테두리 1‥4 (원본 시트와 같은 색인 쓰임)"""
     S = 4; W = 32 * S
     im = Image.new('L', (W, W)); d = ImageDraw.Draw(im)
-    if ch.strip():
+    if len(ch) == 2:                          # 합자 칸: 두 음절을 한 칸에 가로로 좁혀
+        half = Image.new('L', (W * 2, W)); dd = ImageDraw.Draw(half)
+        bb = dd.textbbox((0, 0), ch, font=font); tw = bb[2] - bb[0]
+        x = (W * 2 - tw) // 2
+        dd.text((x - bb[0], (GLYPH * S - (bb[3] - bb[1])) // 2 - bb[1]), ch, 255, font=font)
+        sq = half.crop((x - S, 0, x + tw + S, W)).resize((GLYPH * S, W), Image.LANCZOS)
+        im.paste(sq, (0, 0))
+    elif ch.strip():
         bb = d.textbbox((0, 0), ch, font=font)
         w, h = bb[2] - bb[0], bb[3] - bb[1]
         x = (GLYPH * S - w) // 2 - bb[0]; y = (GLYPH * S - h) // 2 - bb[1]
@@ -96,6 +104,15 @@ def glyph_cell(ch, font):
 
 
 # ---------------- 메시지 ----------------
+PUNCT = ',.!?:;)\'"~、。，．！？：；）」』】〉》”’…‥・·～〜♪♥'     # ] } 는 색 표기라 뺌
+
+
+def squeeze(t):
+    """문장부호 뒤 공백 지움(전 프로젝트 규칙 feedback_no_space_after_punct)"""
+    import re
+    return re.sub('([' + re.escape(PUNCT) + '])[ 　]+', r'\1', t)
+
+
 def load_ocr(sheet):
     m = {}; cols = rows = 0
     for l in open(os.path.join(ROOT, 'work', 'sheets_txt', sheet + '.tsv'), encoding='utf-8'):
@@ -112,6 +129,47 @@ def read_rec(elf, fo):
     return w, cs, o
 
 
+FREE = [[0x21CC30, 0x21D660]]           # 옮긴 기록 자리: 메모리카드 라이브러리 디버그 문구(개발용 일본어, 화면에 안 나옴) — 0x21D660‥ 저장 이름·제목은 건드리지 않음
+                                         # + 옮겨 간 기록의 옛 자리(포인터 전부 고쳤고 코드 직접 참조 없음)
+_CODE = {}
+
+
+def code_refs(elf, fo):
+    """lui/addiu(ori·lw·lh·lhu) 짝으로 기록 VA 를 직접 만드는 코드 위치 — 있으면 옮기면 안 됨"""
+    if not _CODE:
+        n = (0x80 + 0x21DB80 - 4) // 4
+        ws = struct.unpack_from('<%dI' % n, elf, 0)
+        for i in range(0x80 // 4, n):
+            w = ws[i]; op = w >> 26
+            if op in (0x09, 0x0D, 0x23, 0x21, 0x25):
+                rs = (w >> 21) & 31; lo = w & 0xFFFF
+                for j in range(i - 1, max(0x80 // 4, i - 16), -1):
+                    w2 = ws[j]
+                    if w2 >> 26 == 0x0F and (w2 >> 16) & 31 == rs:
+                        hi = w2 & 0xFFFF
+                        va = (hi << 16) + (lo if op == 0x0D else (lo - 0x10000 if lo & 0x8000 else lo))
+                        _CODE.setdefault(va & 0xFFFFFFFF, []).append(j * 4)
+                        break
+    return _CODE.get(fo - FO0 + VA0, [])
+
+
+def alloc(need):
+    for ch in sorted(FREE, key=lambda c: c[1] - c[0]):
+        if ch[1] - ch[0] >= need:
+            a = ch[0]; ch[0] = (ch[0] + need + 3) & ~3
+            return a
+    return None
+
+
+def ptr_refs(elf, fo):
+    """기록 VA 를 담은 u32(4 정렬) 위치들 — 기록 자신 안은 뺌"""
+    b = struct.pack('<I', fo - FO0 + VA0); out = []; i = elf.find(b)
+    while i >= 0:
+        if i % 4 == 0 and not (fo <= i < fo + 400): out.append(i)
+        i = elf.find(b, i + 1)
+    return out
+
+
 def budget(elf, fo):
     """기록 + 뒤 0 채움 → 쓸 수 있는 글자 수(16 B 정렬 경계에서 다음 0 아닌 바이트 전까지)"""
     _, cs, end = read_rec(elf, fo); o = end
@@ -124,14 +182,14 @@ def build_sheet(sheet, elf, report):
     """→ (블록, 항목, 새 항목 bytes) · elf 제자리 수정"""
     m, cols, rows = load_ocr(sheet)
     tr = [l.rstrip('\n').split('\t') for l in open(os.path.join(ROOT, 'work', 'trans', 'msg_%s.tsv' % sheet), encoding='utf-8') if l.strip() and not l.startswith('#')]
-    # 이 시트를 쓰는 다른(번역 안 한) 기록의 칸은 보존
+    # 이 시트를 쓰는 다른(번역 안 한) 기록의 칸은 보존 — 대응표 work/msg_sheets.tsv 기준
     keep = {k for k, ch in m.items() if ch in KEEP}
     done = {int(o, 16) for o, _ in tr}
-    for l in open(os.path.join(ROOT, 'work', 'msgs.tsv'), encoding='utf-8'):
-        o, G, n, sh, t, amb = l.rstrip('\n').split('\t')
-        sc = float(amb.split(',')[0].split(':')[1]) if ':' in amb else 0
-        if sh == sheet and G == '26' and int(o, 16) not in done and sc >= 0.2:     # 점수 낮은 묶음 = 다른 시트(일본어로 안 읽힘)
-            keep |= set(read_rec(elf, int(o, 16))[1])
+    import msgs, msg_export
+    sm = msg_export.sheet_map()
+    for o, G, cs in msgs.records(bytes(elf)):
+        if msg_export.sheet_of(o, sm) == sheet and o not in done:
+            keep |= {c & 0x1FF for c in cs if c != NL}
     have = {}                                  # 글자 → 칸
     for k in sorted(keep):
         if m.get(k): have.setdefault(m[k], k)
@@ -155,16 +213,47 @@ def build_sheet(sheet, elf, report):
         if not free: raise RuntimeError('%s: 칸 모자람(%s)' % (sheet, ch))
         k = free.pop(0); draw[k] = ch; have[ch] = k
         return k
+
+    def encode(ko):
+        """표기: {…} 색 0x1000 · [ … ] 0x2000 · ⏎ 줄바꿈"""
+        out = []; at = 0; lig = None
+        for ch in ko:
+            if ch == '‹':
+                lig = ''; continue
+            if ch == '›':
+                out.append(code(lig) | at); lig = None; continue
+            if lig is not None:
+                lig += ch; continue
+            if ch in '{[':
+                at = 0x1000 if ch == '{' else 0x2000; continue
+            if ch in '}]':
+                at = 0; continue
+            if ch == '⏎':
+                out.append(NL); continue
+            out.append(code(ch) | at)
+        return out
     for o, ko in tr:
         fo = int(o, 16); n_old = len(read_rec(elf, fo)[1]); cap = budget(elf, fo)
-        ko = ko.strip()
-        cs = [code(ch) for ch in ko]
+        ko = squeeze(ko.strip())
+        cs = encode(ko)
+        moved = None
         if len(cs) > cap:
-            ERR.append('%s %s: %d자 > 예산 %d «%s»' % (sheet, o, len(cs), cap, ko)); continue
+            refs = ptr_refs(elf, fo)
+            need = 2 + 2 * len(cs)
+            a = alloc(need) if refs and not code_refs(elf, fo) else None
+            if a is not None:
+                moved = (a, refs); FREE.append([fo, (fo + 2 + 2 * cap) & ~3])
+                for a in refs: struct.pack_into('<I', elf, a, moved[0] - FO0 + VA0)
+            else:
+                ERR.append('%s %s: %d자 > 예산 %d «%s»%s' % (sheet, o, len(cs), cap, ko, '' if refs else ' (포인터 없음)')); continue
         rec = struct.pack('<H', GLYPH * len(cs)) + struct.pack('<%dH' % len(cs), *cs[:-1], cs[-1] | 0x8000)
+        if moved:
+            elf[moved[0]:moved[0] + len(rec)] = rec
+            report.append('  %s → 옮김 ELF %06X (포인터 %d곳) «%s»' % (o, moved[0], len(moved[1]), ko))
+            continue
         old_end = read_rec(elf, fo)[2]
         span = max(old_end - fo, len(rec))     # 늘어나면 뒤 0 채움 자리(예산 안)까지 — 바이트 수는 그대로(삽입 금지)
-        elf[fo:fo + span] = rec + b'\0' * (span - len(rec))
+        elf[fo:fo + span] = rec + bytes(span - len(rec))
         report.append('  %s %2d→%2d/%2d «%s»' % (o, n_old, len(cs), cap, ko))
     # 시트 화소 수정
     blk, ent, ui = int(sheet[:4]), int(sheet[5:7]), int(sheet[8:11])
