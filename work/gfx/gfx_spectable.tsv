@@ -1,0 +1,163 @@
+#그림	상자	한글	꼴 — 기체 제원표(3019~3027) 항목 열(격자 x339~458, y69+21n) + 名·席 단위
+3019_00_000	340,70,457,87	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,91,457,108	전장	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,112,457,129	전고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,133,457,150	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,154,457,171	주익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,175,457,192	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,196,457,213	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,217,457,234	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,238,457,255	최대 이륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,259,457,276	최대 착륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,280,457,297	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,301,457,318	항속 거리	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,322,457,339	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,343,457,360	엔진 추력	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,364,457,381	운항 승무원 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	340,385,457,402	표준 좌석 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3019_00_000	585,364,600,381	명	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3019_00_000	586,385,601,402	석	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3020_00_000	340,70,457,87	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,91,457,108	전장	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,112,457,129	전고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,133,457,150	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,154,457,171	주익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,175,457,192	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,196,457,213	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,217,457,234	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,238,457,255	최대 이륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,259,457,276	최대 착륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,280,457,297	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,301,457,318	항속 거리	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,322,457,339	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,343,457,360	엔진 추력	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,364,457,381	운항 승무원 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	340,385,457,402	표준 좌석 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3020_00_000	585,364,600,381	명	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3020_00_000	586,385,601,402	석	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3021_00_000	340,70,457,87	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,91,457,108	전장	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,112,457,129	전고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,133,457,150	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,154,457,171	주익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,175,457,192	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,196,457,213	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,217,457,234	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,238,457,255	최대 이륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,259,457,276	최대 착륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,280,457,297	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,301,457,318	항속 거리	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,322,457,339	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,343,457,360	엔진 추력	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,364,457,381	운항 승무원 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	340,385,457,402	표준 좌석 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3021_00_000	585,364,600,381	명	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3021_00_000	586,385,601,402	석	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3022_00_000	340,70,457,87	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,91,457,108	전장	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,112,457,129	전고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,133,457,150	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,154,457,171	주익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,175,457,192	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,196,457,213	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,217,457,234	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,238,457,255	최대 이륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,259,457,276	최대 착륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,280,457,297	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,301,457,318	항속 거리	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,322,457,339	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,343,457,360	엔진 추력	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,364,457,381	운항 승무원 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	340,385,457,402	표준 좌석 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3022_00_000	585,364,600,381	명	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3022_00_000	586,385,601,402	석	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3023_00_000	340,70,457,87	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,91,457,108	전장	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,112,457,129	전고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,133,457,150	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,154,457,171	주익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,175,457,192	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,196,457,213	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,217,457,234	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,238,457,255	최대 이륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,259,457,276	최대 착륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,280,457,297	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,301,457,318	항속 거리	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,322,457,339	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,343,457,360	엔진 추력	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,364,457,381	운항 승무원 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	340,385,457,402	표준 좌석 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3023_00_000	585,364,600,381	명	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3023_00_000	586,385,601,402	석	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3024_00_000	340,70,457,87	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,91,457,108	전장	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,112,457,129	전고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,133,457,150	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,154,457,171	주익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,175,457,192	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,196,457,213	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,217,457,234	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,238,457,255	최대 이륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,259,457,276	최대 착륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,280,457,297	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,301,457,318	항속 거리	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,322,457,339	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,343,457,360	엔진 추력	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,364,457,381	운항 승무원 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	340,385,457,402	표준 좌석 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3024_00_000	585,364,600,381	명	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3024_00_000	586,385,601,402	석	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3025_00_000	340,70,457,87	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,91,457,108	전장	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,112,457,129	전고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,133,457,150	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,154,457,171	주익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,175,457,192	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,196,457,213	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,217,457,234	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,238,457,255	최대 이륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,259,457,276	최대 착륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,280,457,297	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,301,457,318	항속 거리	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,322,457,339	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,343,457,360	엔진 추력	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,364,457,381	운항 승무원 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	340,385,457,402	표준 좌석 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3025_00_000	585,364,600,381	명	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3025_00_000	586,385,601,402	석	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3026_00_000	340,70,457,87	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,91,457,108	전장	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,112,457,129	전고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,133,457,150	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,154,457,171	주익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,175,457,192	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,196,457,213	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,217,457,234	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,238,457,255	최대 이륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,259,457,276	최대 착륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,280,457,297	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,301,457,318	항속 거리	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,322,457,339	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,343,457,360	엔진 추력	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,364,457,381	운항 승무원 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	340,385,457,402	표준 좌석 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3026_00_000	585,364,600,381	명	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3026_00_000	586,385,601,402	석	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3027_00_000	340,70,457,87	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,91,457,108	전장	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,112,457,129	전고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,133,457,150	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,154,457,171	주익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,175,457,192	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,196,457,213	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,217,457,234	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,238,457,255	최대 이륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,259,457,276	최대 착륙 중량	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,280,457,297	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,301,457,318	항속 거리	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,322,457,339	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,343,457,360	엔진 추력	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,364,457,381	운항 승무원 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	340,385,457,402	표준 좌석 수	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13;pad=1
+3027_00_000	585,364,600,381	명	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
+3027_00_000	586,385,601,402	석	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=13
