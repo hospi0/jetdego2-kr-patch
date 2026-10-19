@@ -1,0 +1,32 @@
+#그림	상자	한글	꼴 — 마일 캠페인 배너(0057~0063 _00 띠·_01 원형 도장)
+0057_00_000	150,96,500,124	JAL로 날자, 여름의 오키나와.	fill=#101010;edge=#f8f8f8;shadow=0;erase=inpaint;th=60;align=c;font=b;size=22
+0057_00_000	20,146,624,167	7월 20일~7월 27일 나하 공항 도착 노선 보너스 마일 캠페인	fill=#ffffff;edge=#303040;shadow=0;erase=bright;th=150;align=c;font=b;size=15
+0058_00_000	150,96,500,124	JAL로 날자, 여름의 오키나와.	fill=#101010;edge=#f8f8f8;shadow=0;erase=inpaint;th=60;align=c;font=b;size=22
+0058_00_000	20,146,624,167	7월 20일~7월 27일 나하 공항 도착 노선 보너스 마일 캠페인	fill=#ffffff;edge=#303040;shadow=0;erase=bright;th=150;align=c;font=b;size=15
+0059_00_000	150,96,500,124	JAL로 날자, 여름의 홋카이도.	fill=#101010;edge=#f8f8f8;shadow=0;erase=inpaint;th=60;align=c;font=b;size=22
+0059_00_000	20,146,624,167	8월 11일~8월 18일 신치토세 공항 도착 노선 보너스 마일 캠페인	fill=#ffffff;edge=#303040;shadow=0;erase=bright;th=150;align=c;font=b;size=15
+0060_00_000	150,96,500,124	JAL로 날자, 여름의 홋카이도.	fill=#101010;edge=#f8f8f8;shadow=0;erase=inpaint;th=60;align=c;font=b;size=22
+0060_00_000	20,146,624,167	8월 11일~8월 18일 신치토세 공항 도착 노선 보너스 마일 캠페인	fill=#ffffff;edge=#303040;shadow=0;erase=bright;th=150;align=c;font=b;size=15
+0061_00_000	150,96,500,124	JAL로 날자, 여름의 홋카이도.	fill=#101010;edge=#f8f8f8;shadow=0;erase=inpaint;th=60;align=c;font=b;size=22
+0061_00_000	20,146,624,167	8월 11일~8월 18일 신치토세 공항 도착 노선 보너스 마일 캠페인	fill=#ffffff;edge=#303040;shadow=0;erase=bright;th=150;align=c;font=b;size=15
+0062_00_000	150,96,500,124	JAL로 날자, 겨울의 홋카이도.	fill=#101010;edge=#f8f8f8;shadow=0;erase=inpaint;th=60;align=c;font=b;size=22
+0062_00_000	20,146,624,167	12월 15일~12월 22일 신치토세 공항 도착 노선 보너스 마일 캠페인	fill=#ffffff;edge=#303040;shadow=0;erase=bright;th=150;align=c;font=b;size=15
+0063_00_000	20,146,624,167	오늘 하루 전 노선 보너스 마일 캠페인	fill=#ffffff;edge=#303040;shadow=0;erase=bright;th=150;align=c;font=b;size=15
+0057_01_000	455,74,575,95	지금이라면 마일이	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0057_01_000	474,98,560,145	2배	fill=#4040e8;edge=none;shadow=0;erase=fill;align=c;font=b;size=38
+0057_01_000	470,149,562,165	찬스!	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=14
+0059_01_000	455,74,575,95	지금이라면 마일이	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0059_01_000	474,98,560,145	2배	fill=#4040e8;edge=none;shadow=0;erase=fill;align=c;font=b;size=38
+0059_01_000	470,149,562,165	찬스!	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=14
+0060_01_000	455,74,575,95	지금이라면 마일이	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0060_01_000	474,98,560,145	2배	fill=#4040e8;edge=none;shadow=0;erase=fill;align=c;font=b;size=38
+0060_01_000	470,149,562,165	찬스!	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=14
+0061_01_000	455,74,575,95	지금이라면 마일이	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0061_01_000	474,98,560,145	2배	fill=#4040e8;edge=none;shadow=0;erase=fill;align=c;font=b;size=38
+0061_01_000	470,149,562,165	찬스!	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=14
+0062_01_000	455,74,575,95	지금이라면 마일이	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0062_01_000	474,98,560,145	2배	fill=#4040e8;edge=none;shadow=0;erase=fill;align=c;font=b;size=38
+0062_01_000	470,149,562,165	찬스!	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=14
+0063_01_000	455,74,575,95	지금이라면 마일이	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
+0063_01_000	474,98,560,145	3배	fill=#4040e8;edge=none;shadow=0;erase=fill;align=c;font=b;size=38
+0063_01_000	470,149,562,165	찬스!	fill=#101010;edge=none;shadow=0;erase=fill;align=c;font=b;size=14
