@@ -66,7 +66,7 @@ class Jet2:
         blk = self.block(k); ts = blk[8:12]
         es, _ = cmp3.entries(blk)
         for d in self.desc:
-            if d['ts'] == ts and d['n'] == len(es) and all(d['ents'][i][0] == es[i][0] and d['ents'][i][2] == es[i][1] for i in range(len(es))):
+            if d['ts'] == ts and d['n'] >= len(es) and all(d['ents'][i][0] == es[i][0] and d['ents'][i][2] == es[i][1] for i in range(len(es))):
                 return d
         raise KeyError('블록 %d 의 ELF 디렉터리 못 찾음' % k)
 
@@ -194,6 +194,8 @@ def rebuild_block(j2, k, newents, elf):
             raw = len(data)
         else:
             piece = blk[off:off + comp]
+        if i and off % 2048 == 0:              # 원래 섹터 정렬 항목(무압축·직접 읽기)은 정렬 유지
+            out += bytes(1) * ((-len(out)) % 2048)
         e[0], e[1], e[2] = len(out), len(piece), raw
         out += piece
         struct.pack_into('<5I', elf, desc['ea'] + 20 * i, *e)
@@ -218,6 +220,14 @@ def main(check):
         previews.append((sheet, idx))
     if ERR:
         print('\n'.join(ERR)); sys.exit(1)
+    # 그림 글자(tools/gfx.py, work/gfx/gfx.tsv)
+    import gfx
+    gj, gprev = gfx.jobs()
+    for (k, j), data in gj.items():
+        if j in changes.get(k, {}):
+            raise RuntimeError('블록 %d 항목 %d: 메시지 시트와 그림이 같은 항목 — 합치기 필요' % (k, j))
+        changes.setdefault(k, {})[j] = data
+    report.append('그림 %d장 (항목 %d개)' % (len(gprev), len(gj)))
     # 미리보기
     os.makedirs(os.path.join(ROOT, 'work', 'build'), exist_ok=True)
     for sheet, idx in previews:
