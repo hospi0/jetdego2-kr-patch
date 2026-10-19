@@ -24,7 +24,8 @@ GLYPH = 26                            # 글자 칸(폭 머리 = 글자 수 × 26
 KEEP = set('△〇０１２３４５６７８９ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ↑↓←→◯○×')
 OCR_FIX = {'亅': '１', 'ｌ': 'Ｉ', 'Ο': 'Ｏ', 'Ε': 'Ｅ'}
 FW = {chr(c): chr(c + 0xFEE0) for c in range(0x21, 0x7F)}
-ERR = []   # 반각 → 전각(보존 칸 찾기용)
+ERR = []
+INPLACE = {'年': '년', '月': '월', '日': '일'}   # 반각 → 전각(보존 칸 찾기용)
 
 
 # ---------------- JET2 / ELF 구조 ----------------
@@ -134,9 +135,12 @@ def build_sheet(sheet, elf, report):
     have = {}                                  # 글자 → 칸
     for k in sorted(keep):
         if m.get(k): have.setdefault(m[k], k)
-    free = [c * 32 + r for r in range(rows) for c in range(cols) if c * 32 + r not in keep]
-    font = ImageFont.truetype(FONT, 22)
+    # 날짜 등 코드가 칸을 직접 쓸 수 있는 글자는 자리 그대로 한글로(年→년 …)
     draw = {}
+    for k, ch in m.items():
+        if ch in INPLACE:
+            keep.add(k); draw[k] = INPLACE[ch]; have.setdefault(INPLACE[ch], k)
+    free = [c * 32 + r for r in range(rows) for c in range(cols) if c * 32 + r not in keep]
     blank = None
 
     def code(ch):
