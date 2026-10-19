@@ -136,7 +136,13 @@ def render(img, box, text, st):
             mask = cv2.dilate(m, np.ones((5, 5), np.uint8))
             mask[:y0] = 0; mask[y1:] = 0; mask[:, :x0] = 0; mask[:, x1:] = 0
         elif st['erase'] == 'boxes':                    # 여러 상자를 한 번에(따로 지우면 남은 옛 글자가 번져 들어옴) + 그 안 지정 색만 쓰는 상자(cbox)
+            if st.get('dark'):                          # 상자 안 어두운 글자 화소만(밝은 바탕 무늬 살림)
+                lum = rgb.astype(int).sum(-1) // 3
             for b in st['boxes'].split('|'):
+                if st.get('dark'):
+                    bx0, by0, bx1, by1 = map(int, b.split(','))
+                    mm = np.zeros(rgb.shape[:2], np.uint8); mm[by0:by1, bx0:bx1] = (lum[by0:by1, bx0:bx1] < int(st['dark'])) * 255
+                    mask |= cv2.dilate(mm, np.ones((3, 3), np.uint8)); continue
                 up = b.startswith('U')                  # U… = 위쪽 줄(바탕) 늘여 채움 — 아래가 머리카락 등 같은 색이라 인페인팅이 번질 때
                 bx0, by0, bx1, by1 = map(int, b.lstrip('U').split(','))
                 if up:
