@@ -108,6 +108,11 @@ def render(img, box, text, st):
         pass
     elif st['erase'] == 'clear':
         out[y0:y1, x0:x1] = 0
+    elif st['erase'] == 'rows':                         # 가로 줄무늬 바탕: 줄마다 그 줄의 가장 흔한 색으로 칠함
+        for y in range(y0, y1):
+            reg = out[y, x0:x1]
+            vals, cnt = np.unique(reg, axis=0, return_counts=True)
+            out[y, x0:x1] = vals[cnt.argmax()]
     elif st['erase'] == 'fill':                         # 단색 칸: 상자 안 가장 흔한 색으로 칠함
         reg = out[y0:y1, x0:x1].reshape(-1, 4)
         vals, cnt = np.unique(reg, axis=0, return_counts=True)

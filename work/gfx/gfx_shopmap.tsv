@@ -1,0 +1,37 @@
+#그림	상자	한글	꼴 — BLUE SKY 매장 안내(지도) 18장: 머리 띠 + 말풍선(사투리는 가벼운 지방 말투로). 지도 안 작은 글자는 그대로
+3067_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3067_00_000	46,82,512,124	어서 오세요. 신치토세 공항 1층 JAL 도착 로비의⏎경식 찻집 블루스카이입니다. 여러분을 기다리고 있습니다.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3068_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3068_00_000	46,82,512,124	어서 오세요. 신치토세 공항 2층 출발 로비 2개 점포,⏎JAL 탑승 대합실 안 4개 점포에서 여러분을 기다리고 있습니다.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3069_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3069_00_000	46,82,512,124	어서 오세요. 하네다 공항 1층 도착 로비에 있는⏎블루스카이의 매장 지도입니다.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3070_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3070_00_000	46,82,512,124	어서 오세요. 하네다 공항 2층 게이트 라운지 안의⏎매장 지도입니다. 여러분을 기다리고 있습니다.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3071_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3071_00_000	46,82,512,124	국제선 터미널 빌딩 1층 도착 로비에 카페가 있다니까요.⏎커피라도 마시고 가세요. 어서 오이소!	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3072_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3072_00_000	46,82,512,124	국제선 터미널 빌딩 4층 레인보우 플라자에는⏎현지 기념품이 엄청 많다니까요!	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3073_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3073_00_000	46,82,512,124	어서 오세요. 책과 편리한 여행용품을 갖추고⏎기다리고 있어예~. 조심해서 즐겁게 다녀오이소~.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3074_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3074_00_000	46,82,512,124	어서 오세요. 출발 전 한때를 맛있는⏎음료와 가벼운 식사로 편히 쉬어 가이소~.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3075_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3075_00_000	46,82,512,124	오사카 기념품이 억수로 많이 있어예~.⏎조심해서 즐겁게 다녀오이소~.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3076_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3076_00_000	46,82,512,124	어서 오세요. 출발 전 한때를 맛있는⏎음료와 가벼운 식사로 편히 쉬어 가이소~.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3077_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3077_00_000	46,82,512,124	어서 오세요. 약과 편리한 여행용품을 갖추고⏎기다리고 있어예~. 조심해서 즐겁게 다녀오이소~.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3078_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3078_00_000	46,82,512,124	매번 고맙습니데이! 오사카 공항 출발 로비 2층에 있는⏎「블루스카이」의 매장 지도입니다.	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3079_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3079_00_000	46,82,512,124	저희 가게는 2층 국내선 탑승 대합실 안 A 게이트 앞이라예.⏎와 보이소! 들러 보이소!	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3080_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3080_00_000	46,82,512,124	정말 잘 와 주셨어예.⏎2층 국내선 제1터미널에 있는 매장 지도라예!	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3081_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3081_00_000	46,82,512,124	정말 잘 와 주셨어예.⏎2층 국내선 제2터미널에 있는 매장 지도라예!	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3082_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3082_00_000	46,82,512,124	정말 잘 와 주셨어예.⏎3층 국내선 제2터미널에 있는 매장 지도라예!	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3083_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3083_00_000	46,82,512,124	정말 잘 와 주셨어예.⏎3층 국제선 터미널에 있는 매장 지도라예!	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
+3084_00_000	266,13,372,42	매장 안내	fill=#ffffff;edge=#2030a0;shadow=1;erase=inpaint_box;align=c;font=eb;size=20
+3084_00_000	46,82,512,124	하이사이! 오키나와 매장에서는 상품을 전국 택배로도 보낼 수 있어요.⏎자, 아름다운 섬(추라시마)으로 멘소~레!	fill=#202878;edge=none;shadow=0;erase=rows;align=l;font=b;size=13;lh=20
