@@ -21,9 +21,10 @@ VA0, FO0 = 0x100000, 0x80
 SECTAB = 0x17D988                     # ELF 파일 위치: 섹터표 [u64 첫 섹터, u64 끝 섹터, u64 크기, u64 포인터] (JET2 기준)
 FONT = r'C:\claude\utils\font\nanum-gothic\NanumGothicExtraBold.ttf'
 GLYPH = 26                            # 글자 칸(폭 머리 = 글자 수 × 26)
-KEEP = set('０１２３４５６７８９ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ↑↓←→◯○×')
+KEEP = set('△〇０１２３４５６７８９ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ↑↓←→◯○×')
 OCR_FIX = {'亅': '１', 'ｌ': 'Ｉ', 'Ο': 'Ｏ', 'Ε': 'Ｅ'}
-FW = {chr(c): chr(c + 0xFEE0) for c in range(0x21, 0x7F)}   # 반각 → 전각(보존 칸 찾기용)
+FW = {chr(c): chr(c + 0xFEE0) for c in range(0x21, 0x7F)}
+ERR = []   # 반각 → 전각(보존 칸 찾기용)
 
 
 # ---------------- JET2 / ELF 구조 ----------------
@@ -127,7 +128,8 @@ def build_sheet(sheet, elf, report):
     done = {int(o, 16) for o, _ in tr}
     for l in open(os.path.join(ROOT, 'work', 'msgs.tsv'), encoding='utf-8'):
         o, G, n, sh, t, amb = l.rstrip('\n').split('\t')
-        if sh == sheet and G == '26' and int(o, 16) not in done:
+        sc = float(amb.split(',')[0].split(':')[1]) if ':' in amb else 0
+        if sh == sheet and G == '26' and int(o, 16) not in done and sc >= 0.2:     # 점수 낮은 묶음 = 다른 시트(일본어로 안 읽힘)
             keep |= set(read_rec(elf, int(o, 16))[1])
     have = {}                                  # 글자 → 칸
     for k in sorted(keep):
@@ -154,7 +156,7 @@ def build_sheet(sheet, elf, report):
         ko = ko.strip()
         cs = [code(ch) for ch in ko]
         if len(cs) > cap:
-            raise RuntimeError('%s %s: %d자 > 예산 %d «%s»' % (sheet, o, len(cs), cap, ko))
+            ERR.append('%s %s: %d자 > 예산 %d «%s»' % (sheet, o, len(cs), cap, ko)); continue
         rec = struct.pack('<H', GLYPH * len(cs)) + struct.pack('<%dH' % len(cs), *cs[:-1], cs[-1] | 0x8000)
         old_end = read_rec(elf, fo)[2]
         span = max(old_end - fo, len(rec))     # 늘어나면 뒤 0 채움 자리(예산 안)까지 — 바이트 수는 그대로(삽입 금지)
@@ -214,6 +216,8 @@ def main(check):
         changes[blk][ent] = d
         report.append('  새 글자 %d칸 · 남은 빈 칸 %d' % (len(draw), nfree))
         previews.append((sheet, idx))
+    if ERR:
+        print('\n'.join(ERR)); sys.exit(1)
     # 미리보기
     os.makedirs(os.path.join(ROOT, 'work', 'build'), exist_ok=True)
     for sheet, idx in previews:
