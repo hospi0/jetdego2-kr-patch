@@ -16,7 +16,8 @@
 0020_01_004	341,107,404,124	기종	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
 0020_01_004	407,107,489,124	획득 마일	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
 0020_01_004	493,107,616,124	비고	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
-0020_01_006	156,75,316,92	공항 시나리오 기록	fill=#000000;edge=none;shadow=0;erase=fill;align=l;font=b;size=13
+0020_01_006	156,75,316,92		fill=#000000;edge=none;shadow=0;erase=fill;align=l;font=b;size=13
+0020_01_006	208,75,368,92	공항 시나리오 기록	fill=#000000;edge=none;shadow=0;erase=fill;align=l;font=b;size=13
 0020_01_006	92,108,388,125	시나리오 No.	fill=#000000;edge=none;shadow=0;erase=fill;align=l;font=b;size=13;pad=10
 0020_01_006	396,108,468,125	기종	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13
 0020_01_006	474,108,558,125	점수	fill=#000000;edge=none;shadow=0;erase=fill;align=c;font=b;size=13

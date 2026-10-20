@@ -216,8 +216,20 @@ def build_sheet(sheet, elf, report):
 
     def encode(ko):
         """표기: {…} 색 0x1000 · [ … ] 0x2000 · ⏎ 줄바꿈"""
-        out = []; at = 0; lig = None
+        out = []; at = 0; lig = None; sh = None; col = None
         for ch in ko:
+            if sh is not None:                  # ⇥XX = 0x40XX: XX px 띄우기(로그북 이름 오른쪽 정렬 등, 0x401A = 26 px 는 ⏎ 로도 씀)
+                sh += ch
+                if len(sh) == 2: out.append(0x4000 | int(sh, 16)); sh = None
+                continue
+            if ch == '⇥':
+                sh = ''; continue
+            if ch == '⟪':                       # ⟪XX⟫ = 색 비트 0xXX00 (1C·18·0C 등, ⟪00⟫ = 끝) — {…}·[…] 와 같은 자리
+                col = ''; continue
+            if col is not None:
+                if ch == '⟫': at = int(col, 16) << 8; col = None
+                else: col += ch
+                continue
             if ch == '‹':
                 lig = ''; continue
             if ch == '›':
@@ -246,7 +258,7 @@ def build_sheet(sheet, elf, report):
                 for a in refs: struct.pack_into('<I', elf, a, moved[0] - FO0 + VA0)
             else:
                 ERR.append('%s %s: %d자 > 예산 %d «%s»%s' % (sheet, o, len(cs), cap, ko, '' if refs else ' (포인터 없음)')); continue
-        rec = struct.pack('<H', GLYPH * len(cs)) + struct.pack('<%dH' % len(cs), *cs[:-1], cs[-1] | 0x8000)
+        rec = struct.pack('<H', sum((c & 0xFF) if (c & 0xFF00) == 0x4000 else GLYPH for c in cs)) + struct.pack('<%dH' % len(cs), *cs[:-1], cs[-1] | 0x8000)   # 폭 = 칸 26 + 띄우기 px
         if moved:
             elf[moved[0]:moved[0] + len(rec)] = rec
             report.append('  %s → 옮김 ELF %06X (포인터 %d곳) «%s»' % (o, moved[0], len(moved[1]), ko))
