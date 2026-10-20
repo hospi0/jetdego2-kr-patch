@@ -137,7 +137,7 @@ def render(img, box, text, st):
             if stats[i, 1] + stats[i, 3] - 1 < 3:
                 out[y0 + cy:y1, x0:x1][lab == i] = bgc
     elif st['erase'] == 'pp':                           # 부드러운 바탕(보케) 위 큰 글자: 글자 화소 마스크 → 둘레 바탕으로 push-pull 메움
-        out[..., :3] = erase_pp(out[..., :3], (x0, y0, x1, y1), st, _keep_mask(img, st))
+        out[..., :3] = erase_pp(out[..., :3], (int(st.get('ex0', x0)), y0, x1, y1), st, _keep_mask(img, st))   # ex0 = 지우기만 더 왼쪽부터(글자는 x0 부터)
     elif st['erase'] == 'fill':                         # 단색 칸: 상자 안 가장 흔한 색으로 칠함
         reg = out[y0:y1, x0:x1].reshape(-1, 4)
         vals, cnt = np.unique(reg, axis=0, return_counts=True)
@@ -504,6 +504,7 @@ def jobs():
         else:
             new = render(img, box, text, st)
             ub = list(box)                              # 지운 상자까지 합쳐 다시 색인화(그리기 상자 밖 지움이 버려지지 않게)
+            if st.get('ex0'): ub[0] = min(ub[0], int(st['ex0']))
             for b in (st.get('boxes', '').split('|') if st.get('boxes') else []) + ([st['cbox']] if st.get('cbox') else []):
                 bb = list(map(int, b.lstrip('U').split(',')))
                 ub = [min(ub[0], bb[0]), min(ub[1], bb[1]), max(ub[2], bb[2]), max(ub[3], bb[3])]

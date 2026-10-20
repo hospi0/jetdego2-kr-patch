@@ -39,9 +39,9 @@
 3065_00_000	193,305,229,321	표고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3065_00_000	192,326,264,343	공항 면적	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3065_00_000	192,347,246,364	활주로	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
-3051_00_000	257,347,274,364	신	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=15
-3051_00_000	254,368,271,385	신	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=15
-3051_00_000	254,389,271,406	신	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=15
+3051_00_000	257,347,274,364	새	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14;align=c
+3051_00_000	254,368,271,385	새	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14;align=c
+3051_00_000	254,389,271,406	새	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14;align=c
 3048_00_000	318,92,638,111	신치토세 공항  CTS/RJCC	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3048_00_000	318,114,638,133	종별:제2종	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3048_00_000	318,135,638,154	설치 관리자:국토교통성	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
@@ -62,7 +62,7 @@
 3052_00_000	318,157,638,176	공항 소재지:도쿄도 오타구	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3052_00_000	318,178,638,197	이용 시간:24시간	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3052_00_000	318,200,638,219	전망 데크:있음	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
-3052_00_000	96,258,600,392	도쿄 국제(하네다) 공항은 1931년 300m 활주로로 개항했고⏎그 뒤 확장 공사와 정비로 1988년에 새 A 활주로가 완성,⏎1997년에 새 C 활주로, 2000년에 새 B 활주로가 각각⏎운용을 시작했다.⏎도쿄 국제(하네다) 공항은 일본의 메인 공항으로, 국내선의⏎기간 공항으로서 확고한 지위를 쌓은 공항이다.	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14;lh=21
+3052_00_000	96,258,600,392	도쿄 국제(하네다) 공항은 1931년 300m 활주로로 개항했고⏎그 뒤 확장 공사와 정비로 1988년에 신A 활주로가 완성,⏎1997년에 신C 활주로, 2000년에 신B 활주로가 각각⏎운용을 시작했다.⏎도쿄 국제(하네다) 공항은 일본의 메인 공항으로, 국내선의⏎기간 공항으로서 확고한 지위를 쌓은 공항이다.	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14;lh=21
 3054_00_000	318,92,638,111	나고야 공항  NGO/RJNN	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3054_00_000	318,114,638,133	종별:제2종	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3054_00_000	318,135,638,154	설치 관리자:국토교통성	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
