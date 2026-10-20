@@ -346,6 +346,12 @@ def main(check):
             raise RuntimeError('블록 %d 항목 %d: 메시지 시트와 그림이 같은 항목 — 합치기 필요' % (k, j))
         changes.setdefault(k, {})[j] = data
     report.append('그림 %d장 (항목 %d개)' % (len(gprev), len(gj)))
+    import jmap                                     # 비행 중 노선 지도 현 이름(블록 64 날것 8bpp 조각)
+    for (k, j), data in jmap.job().items():
+        if j in changes.get(k, {}):
+            raise RuntimeError('블록 %d 항목 %d: 지도와 다른 그림이 같은 항목' % (k, j))
+        changes.setdefault(k, {})[j] = data
+    report.append('노선 지도 현 이름 %d개' % len(jmap.LABELS))
     # 미리보기
     os.makedirs(os.path.join(ROOT, 'work', 'build'), exist_ok=True)
     for sheet, idx in previews:
