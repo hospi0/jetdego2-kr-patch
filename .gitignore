@@ -6,3 +6,4 @@ work/gfx/*.png
 !work/msg_sheets.tsv
 __pycache__/
 *.iso
+work/gfx/prev_jal/

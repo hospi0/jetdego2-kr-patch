@@ -12,7 +12,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE); sys.path.insert(0, HERE)
 import cmp3, gspkt
 FONTS = {'eb': r'C:\claude\utils\font\nanum-gothic\NanumGothicExtraBold.ttf',
-         'b': r'C:\claude\utils\font\nanum-gothic\NanumGothicBold.ttf'}
+         'b': r'C:\claude\utils\font\nanum-gothic\NanumGothicBold.ttf',
+         'm': r'C:\claude\utils\font\nanum-myeongjo\NanumMyeongjoBold.ttf'}
 SPEC = os.path.join(ROOT, 'work', 'gfx', 'gfx.tsv')
 _blk = {}
 
