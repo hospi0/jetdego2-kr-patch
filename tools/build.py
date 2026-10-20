@@ -288,14 +288,14 @@ def patch_sheet_pixels(d, ui, draw):
 
 
 # ---------------- 블록 재조립 ----------------
-def rebuild_block(j2, k, newents, elf):
+def rebuild_block(j2, k, newents, elf, packer=None, dry=False):
     """newents: {항목번호: 새 원래 bytes} → 새 블록 bytes · ELF 디렉터리 갱신"""
     blk = j2.block(k); desc = j2.desc_of(k)
     out = bytearray(blk[:16])
-    for i, e in enumerate(desc['ents']):
-        off, comp, raw = e[0], e[1], e[2]
+    for i, e0 in enumerate(desc['ents']):
+        e = list(e0); off, comp, raw = e[0], e[1], e[2]
         if i in newents:
-            data = newents[i]; piece = b'CMP3' + struct.pack('<I', len(data)) + lzss.compress(data)
+            data = newents[i]; piece = b'CMP3' + struct.pack('<I', len(data)) + (packer or lzss.compress)(data)
             raw = len(data)
         else:
             piece = blk[off:off + comp]
@@ -303,8 +303,8 @@ def rebuild_block(j2, k, newents, elf):
             out += bytes(1) * ((-len(out)) % 2048)
         e[0], e[1], e[2] = len(out), len(piece), raw
         out += piece
-        struct.pack_into('<5I', elf, desc['ea'] + 20 * i, *e)
-    struct.pack_into('<I', elf, desc['at'] + 0x88, len(out))
+        if not dry: struct.pack_into('<5I', elf, desc['ea'] + 20 * i, *e)
+    if not dry: struct.pack_into('<I', elf, desc['at'] + 0x88, len(out))
     return bytes(out)
 
 
@@ -340,8 +340,17 @@ def main(check):
         Image.fromarray(g).resize((idx.shape[1] * 2, idx.shape[0] * 2), Image.NEAREST).save(os.path.join(ROOT, 'work', 'build', 'sheet_%s.png' % sheet))
     # 블록
     newblocks = {}
+    import lzss_opt, multiprocessing as mp
+    over = set()
+    for k, ents in changes.items():                # 탐욕 압축으로 원래 할당 섹터를 넘치면 최적 분할(lzss_opt, 캐시)로 다시 — 디스크 끝 덧붙임을 줄임
+        f0, _, l0 = struct.unpack_from('<3I', elf, j2.st[j2.offs[k] // 2048])
+        if len(rebuild_block(j2, k, ents, elf, dry=True)) > (l0 - f0 + 1) * 2048: over.add(k)
+    todo = [d for k in over for d in changes[k].values()]
+    print('최적 압축 블록 %d개 · 항목 %d개' % (len(over), len(todo)), flush=True)
+    with mp.Pool(max(1, mp.cpu_count() - 1)) as pool:
+        pool.map(lzss_opt.compress, todo, chunksize=1)
     for k, ents in changes.items():
-        newblocks[k] = rebuild_block(j2, k, ents, elf)
+        newblocks[k] = rebuild_block(j2, k, ents, elf, packer=lzss_opt.compress if k in over else None)
     # 섹터표·배치
     iso_size = os.path.getsize(ISO); end_sec = iso_size // 2048
     place = {}

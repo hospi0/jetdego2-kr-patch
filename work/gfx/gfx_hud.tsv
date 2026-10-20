@@ -1,0 +1,5 @@
+#그림	상자	한글	꼴 — 비행 중 표시 글자판(3203_00_000): 定刻·分遅れ·操縦中止·秒: (숫자·기호는 원본)
+3203_00_000	160,0,206,16	정시	fill=#e8e8e8;edge=none;shadow=0;erase=clear;align=l;font=eb;size=15
+3203_00_000	160,17,212,32	분 늦음	fill=#e8e8e8;edge=none;shadow=0;erase=clear;align=l;font=eb;size=15
+3203_00_000	160,33,226,48	조종 중지	fill=#e8e8e8;edge=none;shadow=0;erase=clear;align=l;font=eb;size=15
+3203_00_000	160,49,184,64	초:	fill=#e8e8e8;edge=none;shadow=0;erase=clear;align=l;font=eb;size=15
