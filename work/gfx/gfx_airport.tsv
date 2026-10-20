@@ -39,9 +39,9 @@
 3065_00_000	193,305,229,321	표고	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3065_00_000	192,326,264,343	공항 면적	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3065_00_000	192,347,246,364	활주로	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
-3051_00_000	257,347,274,364	새	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14;align=c
-3051_00_000	254,368,271,385	새	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14;align=c
-3051_00_000	254,389,271,406	새	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14;align=c
+3051_00_000	257,347,274,364	신	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=15
+3051_00_000	254,368,271,385	신	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=15
+3051_00_000	254,389,271,406	신	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=15
 3048_00_000	318,92,638,111	신치토세 공항  CTS/RJCC	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3048_00_000	318,114,638,133	종별:제2종	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14
 3048_00_000	318,135,638,154	설치 관리자:국토교통성	fill=#f0f0f0;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=14

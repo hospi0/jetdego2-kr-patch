@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 # 기체 제원 카드(0017_03_002~022, 168×336 8bpp) → gfx_spec.tsv (2026-10-20)
 # 줄 = 「항목/값」, 항목 글자 폭 ≈ 10.3 px. 항목 칸만 바꾸고(값·/ 그대로) 끝의 단위 名·席 → 명·석(모양 대조로 위치 찾음)
-import os
+import os, sys
+if '--force' not in sys.argv:          # 2026-10-20: 도트 글꼴(g9)·명 칸 86~97 수정은 gfx_spec.tsv 에만 있음 — 다시 돌리면 덮임
+    sys.exit('⛔ gfx_spec.tsv 는 손으로 고친 판이 기준 — 다시 생성하지 말 것(--force 로만)')
 import numpy as np
 from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(os.path.dirname(HERE))
