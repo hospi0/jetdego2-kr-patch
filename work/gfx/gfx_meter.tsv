@@ -1,0 +1,66 @@
+#그림	상자	한글	꼴 — 계기 설명 라벨(gen_meter.py)
+2879_00_000	266,68,374,85	커맨드 바	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=18;lh=17
+2879_00_000	387,68,443,85	수평의	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2879_00_000	36,104,129,142	경고등	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=20;lh=38
+2879_00_000	548,183,604,200	고도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2879_00_000	37,184,93,201	속도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2879_00_000	36,302,144,340	랜딩 기어⏎레버	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=19
+2879_00_000	547,303,603,320	승강계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2879_00_000	383,372,477,392	기수 방위	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2879_00_000	157,375,251,395	방위 지시기	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2880_00_000	189,69,341,86	경고등	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2880_00_000	510,178,604,198	목표 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2880_00_000	36,225,130,245	기수 방위	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2880_00_000	510,227,604,247	목표 고도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2880_00_000	548,271,604,288	고도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2880_00_000	36,318,144,356	랜딩 기어⏎레버	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=19
+2880_00_000	269,375,325,392	속도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2880_00_000	338,375,446,392	커맨드 바	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=18;lh=17
+2880_00_000	459,375,515,392	수평의	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2881_00_000	303,68,411,85	커맨드 바	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=18;lh=17
+2881_00_000	423,68,479,85	수평의	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2881_00_000	35,104,128,142	경고등	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=20;lh=38
+2881_00_000	35,163,91,180	속도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2881_00_000	549,201,605,218	고도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2881_00_000	549,269,605,286	승강계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2881_00_000	36,302,144,340	랜딩 기어⏎레버	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=19
+2881_00_000	157,375,251,395	방위 지시기	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2881_00_000	385,375,479,395	기수 방위	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2882_00_000	196,69,348,86	경고등	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2882_00_000	510,151,604,171	목표 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2882_00_000	36,201,130,221	기수 방위	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2882_00_000	510,202,604,222	목표 고도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2882_00_000	548,253,604,270	고도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2882_00_000	36,318,144,356	랜딩 기어⏎레버	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=19
+2882_00_000	269,375,325,392	속도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2882_00_000	338,375,446,392	커맨드 바	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=18;lh=17
+2882_00_000	459,375,515,392	수평의	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2883_00_000	381,68,489,85	커맨드 바	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=18;lh=17
+2883_00_000	545,103,602,121	수평의	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=18
+2883_00_000	36,104,129,142	경고등	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=20;lh=38
+2883_00_000	37,206,93,223	속도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2883_00_000	548,206,604,223	고도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2883_00_000	548,281,604,298	승강계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2883_00_000	164,375,258,395	방위 지시기	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2884_00_000	303,68,411,85	커맨드 바	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=18;lh=17
+2884_00_000	424,68,480,85	수평의	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2884_00_000	36,114,129,152	경고등	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=20;lh=38
+2884_00_000	37,182,93,199	속도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2884_00_000	548,213,604,230	고도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2884_00_000	548,302,604,319	승강계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2884_00_000	37,349,145,387	랜딩 기어⏎레버	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=19
+2885_00_000	37,163,130,201	경고등	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=20;lh=38
+2885_00_000	510,183,604,203	목표 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2885_00_000	510,232,604,252	목표 고도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2885_00_000	36,233,130,253	기수 방위	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=20
+2885_00_000	548,280,604,297	고도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2885_00_000	315,377,371,394	속도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2885_00_000	383,377,491,394	커맨드 바	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=18;lh=17
+2885_00_000	503,377,559,394	수평의	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2886_00_000	266,68,374,85	커맨드 바	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=18;lh=17
+2886_00_000	387,68,443,85	수평의	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2886_00_000	36,104,129,142	경고등	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=20;lh=38
+2886_00_000	548,104,604,121	고도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2886_00_000	36,302,144,340	랜딩 기어⏎레버	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=19
+2886_00_000	198,377,254,394	속도계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
+2886_00_000	387,377,443,394	승강계	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=eb;size=19;lh=17
