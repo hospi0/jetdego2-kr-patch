@@ -61,6 +61,16 @@ def store(d, u, idx):
     return bytes(d)
 
 
+def isdot(m):
+    """표시점 ● = 볼록(solidity ≥ 0.9)하고 꽉 찬(≥ 0.7) 둥근 덩어리 — ョ·ロ 같은 글자는 아님"""
+    import cv2
+    ys, xs = np.nonzero(m); pts = np.stack([xs, ys], 1).astype(np.int32)
+    hull = cv2.convexHull(pts); ha = max(1.0, cv2.contourArea(hull) + len(hull) / 2)
+    x0, x1, y0, y1 = xs.min(), xs.max(), ys.min(), ys.max(); s = set(zip(xs.tolist(), ys.tolist()))
+    corners = sum((x, y) in s for x in (x0, x1) for y in (y0, y1))   # 원은 네 모서리가 빔(ョ 같은 꽉 찬 글자는 모서리가 참)
+    return corners == 0 and len(xs) / ha >= 0.9 and len(xs) >= 0.7 * (np.ptp(xs) + 1) * (np.ptp(ys) + 1)
+
+
 def bands(alpha):
     rows = alpha.max(1) > 40; out = []; s = None
     for y, v in enumerate(list(rows) + [False]):
@@ -184,11 +194,36 @@ def render(img, box, text, st):
                     hit |= np.abs(sub - np.array(hexc(c))).sum(-1) < int(st.get('th', '100'))
                 mm = np.zeros(rgb.shape[:2], np.uint8); mm[cy0:cy1, cx0:cx1] = hit[cy0:cy1, cx0:cx1] * 255
                 mask |= cv2.dilate(mm, np.ones((5, 5), np.uint8))
+        elif st['erase'] == 'poly':                     # 회전 사각형(poly=x,y;…) 안의 어두운(lum<th)·빨강 글자 화소만 — 기울어진 지도 라벨
+            pts = np.array([[float(v) for v in q.split(',')] for q in st['poly'].split('|')], np.int32)
+            pm = np.zeros(rgb.shape[:2], np.uint8); cv2.fillPoly(pm, [pts], 255)
+            sub = rgb.astype(int); lum = sub.sum(-1) // 3
+            hit = (lum < int(st.get('th', '150'))) & (np.abs(sub[..., 0] - sub[..., 2]) < 70)
+            hit &= np.abs(sub[..., 0] - sub[..., 1]) < 40
+            if st.get('red'): hit |= (sub[..., 0] > 170) & (sub[..., 1] < 110) & (sub[..., 2] < 110)
+            if st.get('blue'): hit |= (sub[..., 2] > 170) & (sub[..., 0] < 140) & (sub[..., 2] - sub[..., 0] > 60)
+            n0, l0, s0, _ = cv2.connectedComponentsWithStats((hit & (pm > 0)).astype(np.uint8), connectivity=8)
+            for i in range(1, n0):                      # 표시점 ●(꽉 찬 둥근 덩어리)은 남김
+                w_, h_, ar = s0[i, 2], s0[i, 3], s0[i, 4]
+                if 6 <= w_ <= 10 and 6 <= h_ <= 10 and abs(w_ - h_) <= 1 and isdot(l0 == i): hit[l0 == i] = False
+            mask = cv2.dilate(((hit & (pm > 0)) * 255).astype(np.uint8), np.ones((3, 3), np.uint8)) & cv2.dilate(pm, np.ones((3, 3), np.uint8))
+            if st.get('bgfill'):                        # 단색 바탕: 지운 자리를 상자 안 최빈 바탕색으로(둘레 선 색이 번지지 않게)
+                rest = rgb[(pm > 0) & (mask == 0)]
+                if len(rest):
+                    vals, cnt = np.unique(rest.reshape(-1, 3), axis=0, return_counts=True)
+                    rgb[mask > 0] = vals[cnt.argmax()]; mask[:] = 0
         else:                                           # inpaint_box: 상자 통째
             mask[y0:y1, x0:x1] = 255
-        rgb = cv2.inpaint(rgb, mask, 7, cv2.INPAINT_TELEA); out[..., :3] = rgb
+        rgb = cv2.inpaint(rgb, mask, int(st.get('ir', '7')), cv2.INPAINT_TELEA); out[..., :3] = rgb
     # 글자
-    core, core2 = layout(W, H, text, st, both=True)
+    if st.get('rot'):                                   # rot=각도(도, 화면 기준 시계 방향);cx;cy;L;T — L×T 칸에 쓴 글을 돌려 (cx,cy) 중심에
+        L, T = int(float(st['L'])), int(float(st['T']))
+        c0 = layout(L, T, text, st)
+        im = Image.fromarray((c0 * 255).astype(np.uint8)).rotate(-float(st['rot']), resample=Image.BICUBIC, expand=True)
+        core = np.zeros((H, W), np.float32); px = int(round(float(st['cx']) - x0 - im.width / 2)); py = int(round(float(st['cy']) - y0 - im.height / 2))
+        tmp = Image.new('L', (W, H)); tmp.paste(im, (px, py)); core = np.asarray(tmp, np.float32) / 255; core2 = np.zeros_like(core)
+    else:
+        core, core2 = layout(W, H, text, st, both=True)
     a = np.zeros((H, W, 4), np.float32)
     if st.get('sc'):                                    # 원문식 그림자: 테두리째 so px 오른쪽 아래로 민 단색
         so = int(st.get('so', '3'))
@@ -360,12 +395,15 @@ def render_idx(idx, box, text, st):
     font = ImageFont.truetype(FONTS[st['font']], size * S)
     lay = Image.new('L', (W * S, H * S)); d = ImageDraw.Draw(lay)
     bb = d.textbbox((0, 0), text, font=font); tw, th = bb[2] - bb[0], bb[3] - bb[1]
-    if tw > (W - 2 * pad - 4) * S:
-        font = ImageFont.truetype(FONTS[st['font']], int(size * S * (W - 2 * pad - 4) * S / tw))
-        bb = d.textbbox((0, 0), text, font=font); tw, th = bb[2] - bb[0], bb[3] - bb[1]
-    ax = {'l': pad * S + 2 * S, 'c': (W * S - tw) // 2, 'r': W * S - tw - pad * S - 2 * S}[st['align']]
-    d.text((ax - bb[0], (H * S - th) // 2 - bb[1]), text, 255, font=font)
-    core = np.asarray(lay.resize((W, H), Image.LANCZOS), np.float32) / 255
+    if st.get('sq'):                                            # 넘치면 가로만 좁힘(글자 높이 유지)
+        core = layout(W, H, text, st)
+    else:
+        if tw > (W - 2 * pad - 4) * S:
+            font = ImageFont.truetype(FONTS[st['font']], int(size * S * (W - 2 * pad - 4) * S / tw))
+            bb = d.textbbox((0, 0), text, font=font); tw, th = bb[2] - bb[0], bb[3] - bb[1]
+        ax = {'l': pad * S + 2 * S, 'c': (W * S - tw) // 2, 'r': W * S - tw - pad * S - 2 * S}[st['align']]
+        d.text((ax - bb[0], (H * S - th) // 2 - bb[1]), text, 255, font=font)
+        core = np.asarray(lay.resize((W, H), Image.LANCZOS), np.float32) / 255
     ring = np.asarray(Image.fromarray((core * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(0.5)), np.float32) / 255
     out = np.full((H, W), bg, np.uint8)
     out[ring > 0.2] = soft; out[ring > 0.5] = edge
@@ -425,9 +463,17 @@ def jobs():
     out = {}; prev = []
     for r in rows:
         name, boxs, text = r[0], r[1], r[2]; st = parse_style(r[3] if len(r) > 3 else '')
-        k, j, ui = int(name[:4]), int(name[5:7]), int(name[8:11])
+        k, j = int(name[:4]), int(name[5:7])
         d = out.get((k, j)) or entry_data(k, j)
-        idx, pal, u = indexed(d, ui)
+        if name[8] == 'r':                          # 항목 안 날것 4bpp 그림: 0017_06_r<위치>x<폭>x<높이>c<CLUT 위치>(16색, 알파 0x80 = 불투명)
+            import re
+            off, w, h, co = re.match(r'r([0-9A-F]+)x(\d+)x(\d+)c([0-9A-F]+)', name[8:]).groups()
+            off, w, h, co = int(off, 16), int(w), int(h), int(co, 16)
+            b = np.frombuffer(d[off:off + w * h // 2], np.uint8); idx = np.stack([b & 15, b >> 4], 1).ravel().reshape(h, w).copy()
+            pal = np.frombuffer(d[co:co + 64], np.uint8).reshape(16, 4).astype(np.int32); pal[:, 3] = np.minimum(pal[:, 3] * 2, 255)
+            pal = pal.astype(np.uint8); u = (0, 0, 0, 0x14, w, h, None, off)
+        else:
+            idx, pal, u = indexed(d, int(name[8:11]))
         img = pal[idx]
         if boxs.startswith('band:'):
             b = bands(img[..., 3]); y0, y1 = b[int(boxs[5:])]

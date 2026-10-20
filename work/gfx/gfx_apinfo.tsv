@@ -1,0 +1,28 @@
+#그림	상자	한글	꼴 — 공항 선택 정보 아틀라스(블록 17 항목 6 안 날것 4bpp, 2026-10-20 스테이트로 찾음). 이름 = 코드(CTS/RJCC 등) 시작 4 px 앞까지, 코드·활주로 줄은 원본
+0017_06_r10F0C0x256x256c117120	0,1,115,20	신치토세 공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,21,95,40	코마츠 공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,41,135,60	도쿄 국제공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,61,115,80	나고야 공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,81,135,100	간사이 국제공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,101,134,120	오사카 국제공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,121,96,140	히로시마 공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,141,95,160	후쿠오카 공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,161,95,180	나하 공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,181,115,200	시모지시마 공항	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=19;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	0,201,35,216	종별:	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	35,201,112,216	공항 소재지:	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	112,201,157,216	활주로	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	158,201,217,216	자위대 공용	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	104,218,120,233	제	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=c;font=b;size=14;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	120,218,137,233	종	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=c;font=b;size=14;pad=0;sq=1
+0017_06_r10F0C0x256x256c117120	14,216,92,241	시모지시마	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=auto;align=c;font=eb;size=22;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,1,160,17	홋카이도 치토세시	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,17,160,33	이시카와현 코마츠시 우키야나기마치	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,33,160,49	도쿄도 오타구	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,49,160,65	아이치현 니시카스가이군 토요야마초	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,65,160,81	오사카부 이즈미사노시	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,81,160,97	오사카부 토요나카시	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,97,160,113	히로시마현 토요타군 혼고초	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,113,160,129	후쿠오카현 후쿠오카시	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,129,160,145	오키나와현 오키나와시	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
+0017_06_r11C340x160x160c11F5A0	0,145,160,160	오키나와현 미야코군 이라부초	mode=idx;ramp=F,E,C,A,7,3;edge=0;soft=0;bg=0;align=l;font=b;size=14;pad=0;sq=1
