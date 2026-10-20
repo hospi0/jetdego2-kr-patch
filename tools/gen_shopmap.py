@@ -23,7 +23,7 @@ def isdot(m):
 def textmask(a, blue=False):
     r, g, b = a[..., 0], a[..., 1], a[..., 2]; lum = a.sum(-1) // 3
     m = ((lum < 200) & (np.abs(r - b) < 40) & (np.abs(r - g) < 40)).astype(np.uint8)
-    if blue: m = ((b > 170) & (r < 140) & (b - r > 60)).astype(np.uint8)
+    if blue: m = ((b > 150) & (r < 170) & (b - r > 40)).astype(np.uint8)
     n, l, s, _ = cv2.connectedComponentsWithStats(m, connectivity=8)
     for i in range(1, n):
         w_, h_, ar = s[i, 2], s[i, 3], s[i, 4]
@@ -64,7 +64,10 @@ for b, ls in sorted(rows.items()):
             if 'raw' in opt:                    # 상자 안 글자 화소 그대로(붙어 있는 이웃 줄 덩어리를 자를 때)
                 ys, xs = np.nonzero(M[y0:y1, x0:x1]); xs = xs + x0; ys = ys + y0
             if 'bl' in opt:                     # 파란 글자: 상자 안 파랑 화소 전부
-                MB = textmask(a, True); ys, xs = np.nonzero(MB[y0:y1, x0:x1]); xs = xs + x0; ys = ys + y0
+                MB = textmask(a, True); nb, lb = cv2.connectedComponents(MB, connectivity=8)
+                inb = np.zeros_like(MB, bool); inb[y0:y1, x0:x1] = True
+                out_ = np.unique(lb[~inb & (MB > 0)]); sel = (MB > 0) & inb & ~np.isin(lb, out_)   # 상자 테두리(칸 밖으로 이어짐) 제외
+                ys, xs = np.nonzero(sel)
         if len(xs) < 5: print('글자 없음', b, x0, y0, text); continue
         (cx, cy), (w, h), ang = cv2.minAreaRect(np.stack([xs, ys], 1).astype(np.float32))
         if w < h: w, h, ang = h, w, ang + 90

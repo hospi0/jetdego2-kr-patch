@@ -201,12 +201,17 @@ def render(img, box, text, st):
             hit = (lum < int(st.get('th', '150'))) & (np.abs(sub[..., 0] - sub[..., 2]) < 70)
             hit &= np.abs(sub[..., 0] - sub[..., 1]) < 40
             if st.get('red'): hit |= (sub[..., 0] > 170) & (sub[..., 1] < 110) & (sub[..., 2] < 110)
-            if st.get('blue'): hit |= (sub[..., 2] > 170) & (sub[..., 0] < 140) & (sub[..., 2] - sub[..., 0] > 60)
+            if st.get('blue'):                          # 파란 글자: 칸 밖으로 이어지는 파란 덩어리(BLUE SKY 상자 테두리·선)는 남김
+                bm = ((sub[..., 2] > 150) & (sub[..., 0] < 170) & (sub[..., 2] - sub[..., 0] > 40)).astype(np.uint8)
+                nb, lb = cv2.connectedComponents(bm, connectivity=8)
+                outside = np.unique(lb[(pm == 0) & (bm > 0)])
+                hit |= (bm > 0) & ~np.isin(lb, outside)
             n0, l0, s0, _ = cv2.connectedComponentsWithStats((hit & (pm > 0)).astype(np.uint8), connectivity=8)
             for i in range(1, n0):                      # 표시점 ●(꽉 찬 둥근 덩어리)은 남김
                 w_, h_, ar = s0[i, 2], s0[i, 3], s0[i, 4]
                 if 6 <= w_ <= 10 and 6 <= h_ <= 10 and abs(w_ - h_) <= 1 and isdot(l0 == i): hit[l0 == i] = False
             mask = cv2.dilate(((hit & (pm > 0)) * 255).astype(np.uint8), np.ones((3, 3), np.uint8)) & cv2.dilate(pm, np.ones((3, 3), np.uint8))
+            if st.get('blue'): mask[np.isin(lb, outside) & (bm > 0) & (outside.size > 0)] = 0
             if st.get('bgfill'):                        # 단색 바탕: 지운 자리를 상자 안 최빈 바탕색으로(둘레 선 색이 번지지 않게)
                 rest = rgb[(pm > 0) & (mask == 0)]
                 if len(rest):

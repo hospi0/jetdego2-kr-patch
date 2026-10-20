@@ -64,21 +64,21 @@
 3071_00_000	136,260,231,280		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=139,276|139,263|227,263|227,276
 3071_00_000	202,290,262,310		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=205,306|205,293|258,293|258,306
 3071_00_000	331,308,381,328		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=334,324|334,311|377,311|377,324
-3071_00_000	161,345,237,368		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=164,364|164,348|233,348|233,364;blue=1
+3071_00_000	164,348,235,368		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=167,364|167,351|231,351|231,364;blue=1
 3071_00_000	242,234,317,255	수하물 수취소	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=13;rot=0.0;cx=279.0;cy=244.0;L=69;T=13
 3071_00_000	247,246,312,268	세관 검사장	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=14;rot=0.0;cx=279.0;cy=256.5;L=59;T=14
 3071_00_000	136,260,231,280	택배 발송 카운터	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=183.0;cy=269.5;L=89;T=12
 3071_00_000	202,290,262,310	도착 로비	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=231.5;cy=299.5;L=54;T=12
 3071_00_000	331,308,381,328	토카이 은행	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=355.5;cy=317.5;L=44;T=12
-3071_00_000	161,345,237,368	카페테리아	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=15;rot=0.0;cx=198.5;cy=356.0;L=70;T=15
+3071_00_000	164,348,235,368	카페테리아	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=199.0;cy=357.5;L=65;T=12
 3072_00_000	261,230,307,250		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=264,246|264,233|303,233|303,246
 3072_00_000	350,230,405,250		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=353,246|353,233|401,233|401,246
 3072_00_000	260,267,289,287		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=263,283|263,270|285,270|285,283
-3072_00_000	347,328,395,353		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=350,349|350,331|391,331|391,349;blue=1
+3072_00_000	353,331,387,353		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=356,349|356,334|383,334|383,349;blue=1
 3072_00_000	261,230,307,250	레스토랑	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=283.5;cy=239.5;L=40;T=12
 3072_00_000	350,230,405,250	레스토랑	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=377.0;cy=239.5;L=49;T=12
 3072_00_000	260,267,289,287	찻집	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=274.0;cy=276.5;L=23;T=12
-3072_00_000	347,328,395,353	매점	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=12;lh=17;rot=0.0;cx=370.5;cy=340.0;L=42;T=17
+3072_00_000	353,331,387,353	매점	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=12;lh=14;rot=0.0;cx=369.5;cy=341.5;L=28;T=14
 3073_00_000	123,224,473,248		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=126,244|126,227|469,227|469,244
 3073_00_000	123,224,473,248	보안 구역 안  남쪽 윙 [윙 셔틀(남) 끝 역]	fill=#000000;edge=none;shadow=0;erase=none;align=c;font=eb;size=13;lh=16;rot=0.0;cx=297.5;cy=235.5;L=344;T=16
 3074_00_000	122,173,271,197		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=125,193|125,176|267,176|267,193
@@ -96,7 +96,7 @@
 3075_00_000	367,236,428,254		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=370,250|370,239|424,239|424,250
 3075_00_000	157,298,260,316		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=160,312|160,301|256,301|256,312
 3075_00_000	306,298,409,316		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=309,312|309,301|405,301|405,312
-3075_00_000	363,208,437,237		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=366,233|366,211|433,211|433,233;blue=1
+3075_00_000	368,211,433,233		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=371,229|371,214|429,214|429,229;blue=1
 3075_00_000	117,202,296,226	레스토랑·쇼핑 구역	fill=#000000;edge=none;shadow=0;erase=none;align=c;font=eb;size=13;lh=16;rot=0.0;cx=206.0;cy=213.5;L=173;T=16
 3075_00_000	198,240,237,260	쥬리안	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=217.0;cy=249.5;L=33;T=12
 3075_00_000	253,239,312,268	국내선⏎도착 로비	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=282.0;cy=253.0;L=53;T=21
@@ -104,7 +104,7 @@
 3075_00_000	367,236,428,254	맥도날드	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=397.0;cy=244.5;L=55;T=10
 3075_00_000	157,298,260,316	체크인 카운터	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=208.0;cy=306.5;L=97;T=10
 3075_00_000	306,298,409,316	체크인 카운터	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=357.0;cy=306.5;L=97;T=10
-3075_00_000	363,208,437,237	아이리스	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=14;lh=21;rot=0.0;cx=399.5;cy=222.0;L=68;T=21
+3075_00_000	368,211,433,233	아이리스	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=14;lh=14;rot=0.0;cx=400.0;cy=221.5;L=59;T=14
 3076_00_000	118,202,380,226		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=121,222|121,205|376,205|376,222
 3076_00_000	151,252,258,272		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=154,268|154,255|254,255|254,268
 3076_00_000	281,251,401,272		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=284,268|284,254|397,254|397,268
@@ -121,12 +121,12 @@
 3077_00_000	345,234,420,264		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=348,260|348,237|416,237|416,260
 3077_00_000	161,265,211,284		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=164,280|164,268|207,268|207,280
 3077_00_000	358,264,407,284		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=361,280|361,267|403,267|403,280
-3077_00_000	265,276,341,302		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=268,298|268,279|337,279|337,298;blue=1
+3077_00_000	273,280,336,302		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=276,298|276,283|332,283|332,298;blue=1
 3077_00_000	153,235,228,264	보안⏎검사	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=190.0;cy=249.0;L=69;T=21
 3077_00_000	345,234,420,264	보안⏎검사	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=11;rot=0.0;cx=382.0;cy=248.5;L=69;T=22
 3077_00_000	161,265,211,284	북쪽 출발구	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=11;rot=0.0;cx=185.5;cy=274.0;L=44;T=11
 3077_00_000	358,264,407,284	남쪽 출발구	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=382.0;cy=273.5;L=43;T=12
-3077_00_000	265,276,341,302	리리에	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=14;lh=18;rot=0.0;cx=302.5;cy=288.5;L=70;T=18
+3077_00_000	273,280,336,302	리리에	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=14;lh=14;rot=0.0;cx=304.0;cy=290.5;L=57;T=14
 3078_00_000	144,193,252,215		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=147,211|147,196|248,196|248,211
 3078_00_000	346,228,445,248		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=349,244|349,231|441,231|441,244
 3078_00_000	385,324,415,344		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=388,340|388,327|411,327|411,340
@@ -171,9 +171,9 @@
 3081_00_000	290,272,328,292		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=293,288|293,275|324,275|324,288
 3081_00_000	247,285,304,305		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=250,301|250,288|300,288|300,301
 3081_00_000	409,274,472,295		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=412,291|412,277|468,277|468,291
-3081_00_000	116,253,212,276		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=119,272|119,256|208,256|208,272;blue=1
-3081_00_000	344,323,400,341		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=347,337|347,326|396,326|396,337;blue=1
-3081_00_000	399,323,472,341		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=402,337|402,326|468,326|468,337;blue=1
+3081_00_000	117,257,208,276		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=120,272|120,260|204,260|204,272;blue=1
+3081_00_000	343,323,400,341		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=346,337|346,326|396,326|396,337;blue=1
+3081_00_000	398,323,472,341		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=401,337|401,326|468,326|468,337;blue=1
 3081_00_000	78,161,239,185	국내선 제2터미널	fill=#000000;edge=none;shadow=0;erase=none;align=c;font=eb;size=14;lh=16;rot=0.0;cx=158.0;cy=172.5;L=155;T=16
 3081_00_000	94,199,157,220	탑승 대합실	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=13;rot=0.0;cx=125.0;cy=209.0;L=57;T=13
 3081_00_000	242,244,289,264	라운지	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=265.0;cy=253.5;L=41;T=12
@@ -182,21 +182,21 @@
 3081_00_000	290,272,328,292	출발구	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=308.5;cy=281.5;L=32;T=12
 3081_00_000	247,285,304,305	출발 로비	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=12;rot=0.0;cx=275.0;cy=294.5;L=51;T=12
 3081_00_000	409,274,472,295	탑승 대합실	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=13;rot=0.0;cx=440.0;cy=284.0;L=57;T=13
-3081_00_000	116,253,212,276	게이트 라운지 찻집	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=15;rot=0.0;cx=163.5;cy=264.0;L=90;T=15
-3081_00_000	344,323,400,341	기프트 파크	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=371.5;cy=331.5;L=50;T=10
-3081_00_000	399,323,472,341	프레시 마트	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=435.0;cy=331.5;L=67;T=10
+3081_00_000	117,257,208,276	게이트 라운지 찻집	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=11;rot=0.0;cx=162.0;cy=266.0;L=85;T=11
+3081_00_000	343,323,400,341	기프트 파크	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=371.0;cy=331.5;L=51;T=10
+3081_00_000	398,323,472,341	프레시 마트	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=434.5;cy=331.5;L=68;T=10
 3082_00_000	97,161,247,183		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=100,179|100,164|243,164|243,179
 3082_00_000	112,194,154,219		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=115,215|115,197|150,197|150,215
 3082_00_000	260,230,370,247		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=263,243|263,233|366,233|366,243
 3082_00_000	285,299,354,317		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=288,313|288,302|350,302|350,313
 3082_00_000	370,345,428,363		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=373,359|373,348|424,348|424,359
-3082_00_000	225,211,288,232		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=228,228|228,214|284,214|284,228;blue=1
+3082_00_000	231,214,284,232		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=234,228|234,217|280,217|280,228;blue=1
 3082_00_000	97,161,247,183	국내선 제2터미널	fill=#000000;edge=none;shadow=0;erase=none;align=c;font=eb;size=14;lh=14;rot=0.0;cx=171.5;cy=171.5;L=144;T=14
 3082_00_000	112,194,154,219	게임⏎코너	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=10;lh=8;rot=0.0;cx=132.5;cy=206.0;L=36;T=17
 3082_00_000	260,230,370,247	월드 델리셔스 존	fill=#101010;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=9;rot=0.0;cx=314.5;cy=238.0;L=104;T=9
 3082_00_000	285,299,354,317	하카타 미각 존	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=319.0;cy=307.5;L=63;T=10
 3082_00_000	370,345,428,363	유료 대합실	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=398.5;cy=353.5;L=52;T=10
-3082_00_000	225,211,288,232	레스토랑	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=12;lh=13;rot=0.0;cx=256.0;cy=221.0;L=57;T=13
+3082_00_000	231,214,284,232	레스토랑	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=12;lh=10;rot=0.0;cx=257.0;cy=222.5;L=47;T=10
 3083_00_000	92,161,219,184		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=95,180|95,164|215,164|215,180
 3083_00_000	127,259,183,279		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=130,275|130,262|179,262|179,275
 3083_00_000	240,281,280,301		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=243,297|243,284|276,284|276,297
@@ -219,8 +219,8 @@
 3084_00_000	88,320,141,340		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=91,336|91,323|137,323|137,336
 3084_00_000	251,335,305,356		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=254,352|254,338|301,338|301,352
 3084_00_000	334,338,385,358		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=337,354|337,341|381,341|381,354
-3084_00_000	145,246,251,269		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=148,265|148,249|247,249|247,265;blue=1
-3084_00_000	147,346,188,370		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=150,366|150,349|184,349|184,366;blue=1
+3084_00_000	150,249,251,270		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=153,266|153,252|247,252|247,266;blue=1
+3084_00_000	152,351,184,371		fill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=155,367|155,354|180,354|180,367;blue=1
 3084_00_000	95,211,138,242	탑승⏎대합실	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=11;rot=0.0;cx=116.0;cy=226.0;L=37;T=23
 3084_00_000	424,211,467,242	탑승⏎대합실	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=11;rot=0.0;cx=445.0;cy=226.0;L=37;T=23
 3084_00_000	245,269,313,287	웰컴 홀	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=11;lh=10;rot=0.0;cx=278.5;cy=277.5;L=62;T=10
@@ -229,5 +229,5 @@
 3084_00_000	88,320,141,340	라운지	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=12;lh=12;rot=0.0;cx=114.0;cy=329.5;L=47;T=12
 3084_00_000	251,335,305,356	종합 안내	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=12;lh=13;rot=0.0;cx=277.5;cy=345.0;L=48;T=13
 3084_00_000	334,338,385,358	숍	fill=#2a2a2a;edge=none;shadow=0;erase=none;align=c;font=eb;size=12;lh=12;rot=0.0;cx=359.0;cy=347.5;L=45;T=12
-3084_00_000	145,246,251,269	스낵 NO.1, 2	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=13;lh=15;rot=0.0;cx=197.5;cy=257.0;L=100;T=15
-3084_00_000	147,346,188,370	매점	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=13;lh=16;rot=0.0;cx=167.0;cy=357.5;L=35;T=16
+3084_00_000	150,249,251,270	스낵 NO.1, 2	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=13;lh=13;rot=0.0;cx=200.0;cy=259.0;L=95;T=13
+3084_00_000	152,351,184,371	매점	fill=#3a46e8;edge=none;shadow=0;erase=none;align=c;font=eb;size=13;lh=12;rot=0.0;cx=167.5;cy=360.5;L=26;T=12
