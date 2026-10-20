@@ -7,3 +7,5 @@ work/gfx/*.png
 __pycache__/
 *.iso
 work/gfx/prev_jal/
+dist/
+my files/
