@@ -49,7 +49,7 @@ for b, ls in sorted(rows.items()):
     for (x0, y0, x1, y1), ids, text, opt in ls:
         if ids is not None:                     # #번호+번호 = shoplabels.py 검출 덩어리
             xs = np.concatenate([DET[b][i][10] for i in ids]); ys = np.concatenate([DET[b][i][11] for i in ids])
-            if float(opt.get('a', '1')) == 0:   # 가로 라벨: 같은 줄에서 바로 옆(8 px 안)에 붙은 글자 덩어리도 넣음(목록에서 빠진 조각)
+            if float(opt.get('a', '1')) == 0 and 'nx' not in opt:   # 가로 라벨: 같은 줄에서 바로 옆(8 px 안)에 붙은 글자 덩어리도 넣음(목록에서 빠진 조각)
                 n_, lab_, st_, cen_ = cv2.connectedComponentsWithStats(M, connectivity=8)
                 X0, X1, Y0, Y1 = xs.min() - 8, xs.max() + 8, ys.min() - 1, ys.max() + 1
                 for _ in range(3):
@@ -61,6 +61,8 @@ for b, ls in sorted(rows.items()):
             n_, lab_, st_, cen_ = cv2.connectedComponentsWithStats(cv2.dilate(M, np.ones((2, 2), np.uint8)), connectivity=8)
             keep = [i for i in range(1, n_) if x0 <= cen_[i][0] < x1 and y0 <= cen_[i][1] < y1]   # 중심이 상자 안인 덩어리만
             ys, xs = np.nonzero(np.isin(lab_, keep) & (M > 0))
+            if 'raw' in opt:                    # 상자 안 글자 화소 그대로(붙어 있는 이웃 줄 덩어리를 자를 때)
+                ys, xs = np.nonzero(M[y0:y1, x0:x1]); xs = xs + x0; ys = ys + y0
             if 'bl' in opt:                     # 파란 글자: 상자 안 파랑 화소 전부
                 MB = textmask(a, True); ys, xs = np.nonzero(MB[y0:y1, x0:x1]); xs = xs + x0; ys = ys + y0
         if len(xs) < 5: print('글자 없음', b, x0, y0, text); continue
@@ -77,7 +79,7 @@ for b, ls in sorted(rows.items()):
         poly = '|'.join('%d,%d' % (round(px), round(py)) for px, py in pts)
         bx0, by0 = max(0, int(pts[:, 0].min()) - 3), max(0, int(pts[:, 1].min()) - 3)
         bx1, by1 = min(a.shape[1], int(pts[:, 0].max()) + 4), min(a.shape[0], int(pts[:, 1].max()) + 4)
-        n = text.count('⏎') + 1; T = h + 2; L = w + 4
+        n = text.count('⏎') + 1; T = int(opt.get('h', h + 2)); L = int(opt.get('w', w + 4))
         er.append('%d_00_000\t%d,%d,%d,%d\t\tfill=#000000;edge=none;shadow=0;erase=poly;th=200;ir=2;bgfill=1;poly=%s%s' % (b, bx0, by0, bx1, by1, poly, (';red=1' if 'r' in opt else '') + (';blue=1' if 'bl' in opt else '')))
         dr.append('%d_00_000\t%d,%d,%d,%d\t%s\tfill=%s;edge=none;shadow=0;erase=none;align=c;font=eb;size=%s;lh=%d;rot=%.1f;cx=%.1f;cy=%.1f;L=%d;T=%d' % (
             b, bx0, by0, bx1, by1, text, opt.get('c', '#2a2a2a'), opt.get('s', str(max(8, min(12, int(h // n) + 1)))), int(T // n), ang, cx, cy, L, T))
