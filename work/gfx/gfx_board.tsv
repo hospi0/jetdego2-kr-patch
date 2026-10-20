@@ -10,29 +10,38 @@
 0002_00_000	0,193,103,216	나하 공항	fill=auto;edge=auto;shadow=0;erase=clear;align=l;font=b;size=20
 0002_00_000	0,352,127,376	시모지시마 공항	fill=auto;edge=auto;shadow=0;erase=clear;align=l;font=b;size=20
 #출발 안내판 도시 줄(0017_07_002): 일본어+로마자 자리에 한글만
-0017_07_002	2,1,104,23	삿포로	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=l;font=b;size=18
-0017_07_002	2,25,104,47	코마츠	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=l;font=b;size=18
-0017_07_002	2,49,104,71	나고야	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=l;font=b;size=18
-0017_07_002	2,73,104,95	히로시마	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=l;font=b;size=18
-0017_07_002	2,97,104,119	도쿄	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=l;font=b;size=18
-0017_07_002	2,121,104,143	간사이	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=l;font=b;size=18
-0017_07_002	2,145,104,167	오사카	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=l;font=b;size=18
-0017_07_002	2,169,104,191	후쿠오카	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=l;font=b;size=18
-0017_07_002	2,193,104,215	나하	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=l;font=b;size=18
-0017_07_002	2,217,36,239	맑음	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=c;font=b;size=16
-0017_07_002	46,217,80,239	비	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=c;font=b;size=16
-0017_07_002	90,217,124,239	흐림	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=c;font=b;size=16
-0017_07_002	128,217,172,239	눈	fill=#d8d8d8;edge=none;shadow=0;erase=bright;th=120;align=c;font=b;size=16
+0017_07_002	2,1,104,23	삿포로	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=l;font=b;size=18
+0017_07_002	2,25,104,47	코마츠	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=l;font=b;size=18
+0017_07_002	2,49,104,71	나고야	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=l;font=b;size=18
+0017_07_002	2,73,104,95	히로시마	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=l;font=b;size=18
+0017_07_002	2,97,104,119	도쿄	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=l;font=b;size=18
+0017_07_002	2,121,104,143	간사이	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=l;font=b;size=18
+0017_07_002	2,145,104,167	오사카	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=l;font=b;size=18
+0017_07_002	2,169,104,191	후쿠오카	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=l;font=b;size=18
+0017_07_002	2,193,104,215	나하	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=l;font=b;size=18
+0017_07_002	2,217,36,239	맑음	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=c;font=b;size=16
+0017_07_002	46,217,80,239	비	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=c;font=b;size=16
+0017_07_002	90,217,124,239	흐림	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=c;font=b;size=16
+0017_07_002	128,217,160,239	눈	fill=#d8d8d8;edge=none;shadow=0;erase=rows;align=c;font=b;size=16
 #큰 도시 이름(0017_07_004, 파란 바탕): 일본어 줄만
-0017_07_004	2,1,104,23	삿포로	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=22
-0017_07_004	2,41,104,63	코마츠	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=22
-0017_07_004	2,81,104,103	나고야	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=22
-0017_07_004	2,121,104,143	오사카	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=22
-0017_07_004	2,161,104,183	후쿠오카	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=22
-0017_07_004	2,201,104,223	나하	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=22
-0017_07_004	106,1,206,23	히로시마	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=22
-0017_07_004	106,41,206,63	도쿄	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=22
-0017_07_004	106,81,206,103	간사이	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=c;font=b;size=22
+0017_07_004	2,0,104,40		fill=#ffffff;edge=none;shadow=0;erase=cc;cy=25;align=c;font=b;size=22
+0017_07_004	2,1,104,23	삿포로	fill=#ffffff;edge=none;shadow=0;erase=none;align=c;font=b;size=24
+0017_07_004	2,40,104,80		fill=#ffffff;edge=none;shadow=0;erase=cc;cy=65;align=c;font=b;size=22
+0017_07_004	2,41,104,63	코마츠	fill=#ffffff;edge=none;shadow=0;erase=none;align=c;font=b;size=24
+0017_07_004	2,80,104,120		fill=#ffffff;edge=none;shadow=0;erase=cc;cy=105;align=c;font=b;size=22
+0017_07_004	2,81,104,103	나고야	fill=#ffffff;edge=none;shadow=0;erase=none;align=c;font=b;size=24
+0017_07_004	2,120,104,160		fill=#ffffff;edge=none;shadow=0;erase=cc;cy=145;align=c;font=b;size=22
+0017_07_004	2,121,104,143	오사카	fill=#ffffff;edge=none;shadow=0;erase=none;align=c;font=b;size=24
+0017_07_004	2,160,104,200		fill=#ffffff;edge=none;shadow=0;erase=cc;cy=185;align=c;font=b;size=22
+0017_07_004	2,161,104,183	후쿠오카	fill=#ffffff;edge=none;shadow=0;erase=none;align=c;font=b;size=24
+0017_07_004	2,200,104,240		fill=#ffffff;edge=none;shadow=0;erase=cc;cy=225;align=c;font=b;size=22
+0017_07_004	2,201,104,223	나하	fill=#ffffff;edge=none;shadow=0;erase=none;align=c;font=b;size=24
+0017_07_004	106,0,206,40		fill=#ffffff;edge=none;shadow=0;erase=cc;cy=25;align=c;font=b;size=22
+0017_07_004	106,1,206,23	히로시마	fill=#ffffff;edge=none;shadow=0;erase=none;align=c;font=b;size=24
+0017_07_004	106,40,206,80		fill=#ffffff;edge=none;shadow=0;erase=cc;cy=65;align=c;font=b;size=22
+0017_07_004	106,41,206,63	도쿄	fill=#ffffff;edge=none;shadow=0;erase=none;align=c;font=b;size=24
+0017_07_004	106,80,206,120		fill=#ffffff;edge=none;shadow=0;erase=cc;cy=105;align=c;font=b;size=22
+0017_07_004	106,81,206,103	간사이	fill=#ffffff;edge=none;shadow=0;erase=none;align=c;font=b;size=24
 #날씨·도시 표(0017_07_008, 주황 글자, 투명 바탕): 도시 칸·날씨 글자만(아이콘·숫자 그대로)
 0017_07_008	84,1,162,31	삿포로	fill=auto;edge=none;shadow=0;erase=clear;align=c;font=b;size=22
 0017_07_008	84,33,162,63	코마츠	fill=auto;edge=none;shadow=0;erase=clear;align=c;font=b;size=22
@@ -47,31 +56,34 @@
 0017_07_008	186,161,216,191	비	fill=auto;edge=none;shadow=0;erase=clear;align=c;font=b;size=20
 0017_07_008	186,193,216,223	눈	fill=auto;edge=none;shadow=0;erase=clear;align=c;font=b;size=20
 0017_07_008	186,225,216,255	맑음	fill=auto;edge=none;shadow=0;erase=clear;align=c;font=b;size=18
-#출발 안내판 머리글(0017_07_000 밝은 판·0017_07_012 띠): 일본어 줄만
+#출발 안내판 머리글(0017_07_000 밝은 판·0017_07_012 띠): 일본어 줄 띠를 바탕색으로 통째 밀고 다시 씀(영문 줄은 원본)
 0017_07_000	459,36,503,57	출발	fill=#ffffff;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=18
-0017_07_000	40,66,100,81	항공사	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_000	150,66,190,81	편명	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_000	199,66,250,81	행선지	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_000	311,66,350,81	기종	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_000	360,66,400,81	정시	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_000	436,66,508,81	예정/도착	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_000	512,66,552,81	날씨	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_000	559,66,600,81	마일	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_000	217,364,277,386	안내	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=17
-0017_07_012	40,38,100,53	항공사	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_012	150,38,190,53	편명	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_012	199,38,250,53	행선지	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_012	311,38,350,53	기종	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_012	360,38,400,53	정시	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_012	436,38,508,53	예정/도착	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_012	512,38,552,53	날씨	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
-0017_07_012	559,38,600,53	마일	fill=auto;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=13
+0017_07_000	12,66,620,81		fill=#fdfdfd;edge=none;shadow=0;erase=fill;align=l;font=b;size=14
+0017_07_000	40,66,90,81	항공사	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_000	150,66,200,81	편명	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_000	199,66,249,81	행선지	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_000	311,66,361,81	기종	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_000	360,66,410,81	정시	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_000	436,66,516,81	예정/도착	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_000	512,66,562,81	날씨	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_000	559,66,609,81	마일	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_000	217,364,277,386	안내	fill=#fdfdfd;edge=none;shadow=0;erase=bright;th=150;align=l;font=b;size=17
+0017_07_012	12,37,620,52		fill=#fdfdfd;edge=none;shadow=0;erase=fill;align=l;font=b;size=14
+0017_07_012	40,37,90,52	항공사	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_012	150,37,200,52	편명	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_012	199,37,249,52	행선지	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_012	311,37,361,52	기종	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_012	360,37,410,52	정시	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_012	436,37,516,52	예정/도착	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_012	512,37,562,52	날씨	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
+0017_07_012	559,37,609,52	마일	fill=#fdfdfd;edge=none;shadow=0;erase=none;align=l;font=b;size=14
 #어두운 판(0017_07_006, 주황 글자)
-0017_07_006	31,28,72,47	편명	fill=auto;edge=none;shadow=0;erase=bright;th=70;align=l;font=b;size=14
-0017_07_006	166,28,210,47	행선지	fill=auto;edge=none;shadow=0;erase=bright;th=70;align=l;font=b;size=14
-0017_07_006	254,28,298,47	기종	fill=auto;edge=none;shadow=0;erase=bright;th=70;align=l;font=b;size=14
-0017_07_006	320,28,362,47	정시	fill=auto;edge=none;shadow=0;erase=bright;th=70;align=l;font=b;size=14
-0017_07_006	393,28,476,47	예정/도착	fill=auto;edge=none;shadow=0;erase=bright;th=70;align=l;font=b;size=14
-0017_07_006	480,28,520,47	날씨	fill=auto;edge=none;shadow=0;erase=bright;th=70;align=l;font=b;size=14
-0017_07_006	549,28,598,47	마일	fill=auto;edge=none;shadow=0;erase=bright;th=70;align=l;font=b;size=14
-0017_07_006	209,359,286,386	안내	fill=auto;edge=none;shadow=0;erase=bright;th=70;align=l;font=b;size=22
+0017_07_006	12,27,628,48		fill=#da7126;edge=none;shadow=0;erase=fill;align=l;font=b;size=17
+0017_07_006	31,27,91,48	편명	fill=#da7126;edge=none;shadow=0;erase=none;align=l;font=b;size=17
+0017_07_006	166,27,226,48	행선지	fill=#da7126;edge=none;shadow=0;erase=none;align=l;font=b;size=17
+0017_07_006	254,27,314,48	기종	fill=#da7126;edge=none;shadow=0;erase=none;align=l;font=b;size=17
+0017_07_006	320,27,380,48	정시	fill=#da7126;edge=none;shadow=0;erase=none;align=l;font=b;size=17
+0017_07_006	393,27,477,48	예정/도착	fill=#da7126;edge=none;shadow=0;erase=none;align=l;font=b;size=17
+0017_07_006	480,27,540,48	날씨	fill=#da7126;edge=none;shadow=0;erase=none;align=l;font=b;size=17
+0017_07_006	549,27,609,48	마일	fill=#da7126;edge=none;shadow=0;erase=none;align=l;font=b;size=17
+0017_07_006	209,359,286,386	안내	fill=#da7126;edge=none;shadow=0;erase=bright;th=70;align=l;font=b;size=22

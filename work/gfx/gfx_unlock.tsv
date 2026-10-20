@@ -1,25 +1,32 @@
 #그림	상자	한글	꼴 — 시각표 해금·기체 해금·비행 시간 돌파(0069~0078)
 0069_00_000	20,32,600,76	JAL B737 전 시각표 등장.	fill=#ffffff;edge=#202020;shadow=1;erase=inpaint;th=60;align=l;font=b;size=34;pad=8
-0069_00_000	18,80,620,100	삿포로·코마츠·도쿄·나고야·간사이·후쿠오카·오키나와 7개 공항의 전 시각표를 운항할 수 있습니다.	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=13;pad=6
+0069_00_000	18,80,620,100	삿포로·코마츠·도쿄·나고야·간사이·후쿠오카·오키나와 7개 공항의 전 시각표 운항 가능.	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=16;pad=6
 0070_00_000	20,32,600,76	JAL B767 전 시각표 등장.	fill=#ffffff;edge=#202020;shadow=1;erase=inpaint;th=60;align=l;font=b;size=34;pad=8
-0070_00_000	18,80,620,100	삿포로·코마츠·도쿄·나고야·간사이·이타미·히로시마·후쿠오카·오키나와 9개 공항의 전 시각표를 운항할 수 있습니다.	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=13;pad=6
+0070_00_000	18,80,620,100	삿포로·코마츠·도쿄·나고야·간사이·이타미·히로시마·후쿠오카·오키나와 9개 공항의 전 시각표 운항 가능.	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=16;pad=6
 0071_00_000	20,32,600,76	JAL B747 전 시각표 등장.	fill=#ffffff;edge=#202020;shadow=1;erase=inpaint;th=60;align=l;font=b;size=34;pad=8
-0071_00_000	18,80,620,100	삿포로·도쿄·간사이·이타미·후쿠오카·오키나와 6개 공항의 전 시각표를 운항할 수 있습니다.	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=13;pad=6
+0071_00_000	18,80,620,100	삿포로·도쿄·간사이·이타미·후쿠오카·오키나와 6개 공항의 전 시각표 운항 가능.	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=16;pad=6
 0072_00_000	20,32,600,76	JAL B777 전 시각표 등장.	fill=#ffffff;edge=#202020;shadow=1;erase=inpaint;th=60;align=l;font=b;size=34;pad=8
-0072_00_000	18,80,620,100	삿포로·코마츠·도쿄·간사이·히로시마·후쿠오카·오키나와 7개 공항의 전 시각표를 운항할 수 있습니다.	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=13;pad=6
+0072_00_000	18,80,620,100	삿포로·코마츠·도쿄·간사이·히로시마·후쿠오카·오키나와 7개 공항의 전 시각표 운항 가능.	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=16;pad=6
 0073_00_000	118,46,530,88	JAL MD-11을 당신 손에.	fill=#ffffff;edge=#202020;shadow=1;erase=inpaint;th=60;align=c;font=b;size=28
 0073_00_000	54,302,500,400	애칭은 「J Bird」.⏎일본의 「희귀새」 이름을 윙렛에 그렸다.⏎3발 엔진, 상반각이 붙은 수평 꼬리날개,⏎직선적인 주익과 플랩이 인상적인 JAL MD-11.⏎그런 JAL MD-11이 쾌적한 비행을 약속합니다.	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=13;lh=19
 0074_00_000	118,46,530,88	JAL DC-8을 당신 손에.	fill=#ffffff;edge=#202020;shadow=1;erase=inpaint;th=60;align=c;font=b;size=28
 0074_00_000	54,302,500,400	애칭은 「하늘의 귀부인」.⏎긴 동체와 우아한 외관이 인상적인 JAL DC-8-61.⏎747이 등장할 때까지 세계 최대 여객기로 활약.⏎그런 시대를 개척한 JAL DC-8-61로⏎일본의 하늘을 비행해 보지 않겠습니까?	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=13;lh=19
 0075_00_000	118,46,530,88	JAL YS-11을 당신 손에.	fill=#ffffff;edge=#202020;shadow=1;erase=inpaint;th=60;align=c;font=b;size=28
 0075_00_000	54,302,500,400	애칭은 「국산 첫 여객기」.⏎가는 동체, 단정한 주익의 쌍발 터보프롭기.⏎일본항공에서는 1969년부터 1년간만 운항한 환상의 여객기.⏎그런 JAL YS-11A-217로⏎향수에 젖어 보지 않겠습니까?	fill=#ffffff;edge=#202020;shadow=0;erase=inpaint;th=60;align=l;font=b;size=13;lh=19
-0076_00_000	34,34,280,94	비행 시간	fill=#ffffff;edge=#e05010;shadow=1;erase=inpaint_box;align=l;font=eb;size=38
-0076_00_000	84,104,610,206	30시간 돌파!	fill=#f06810;edge=#ffffff;shadow=1;erase=boxes;boxes=78,92,420,146|514,92,612,146|U420,92,514,148|78,146,420,196|514,146,612,196;cbox=420,148,514,190;ecol=#f07000,#f06000,#ff8000,#ffffff,#e86010;th=100;align=l;font=eb;size=58;keep=420,148,524,216;kcol=#f07000,#f06000,#ff8000,#ffffff,#e86010;kth=110
-0076_00_000	38,284,420,376	이번 플레이로 비행 시간이⏎30시간을 넘었습니다.⏎축하합니다.	fill=#c03010;edge=#ffffff;shadow=0;erase=inpaint;th=50;align=l;font=b;size=18;lh=30
-0077_00_000	34,34,280,94	비행 시간	fill=#ffffff;edge=#10a040;shadow=1;erase=inpaint_box;align=l;font=eb;size=38
-0077_00_000	84,104,610,206	50시간 돌파!	fill=#10b040;edge=#ffffff;shadow=1;erase=boxes;boxes=78,92,508,146|600,92,612,146|U508,92,600,148|78,146,508,196|600,146,612,196;cbox=508,148,600,190;ecol=#00c040,#20d060,#00a030,#ffffff,#40d070;th=100;align=l;font=eb;size=58;keep=508,148,610,216;kcol=#00c040,#20d060,#00a030,#ffffff,#40d070;kth=110
-0077_00_000	38,284,420,376	이번 플레이로 비행 시간이⏎50시간을 넘었습니다.⏎축하합니다.	fill=#108030;edge=#ffffff;shadow=0;erase=inpaint;th=50;align=l;font=b;size=18;lh=30
-0078_00_000	34,34,280,94	비행 시간	fill=#ffffff;edge=#4040c0;shadow=1;erase=inpaint_box;align=l;font=eb;size=38
-0078_00_000	34,104,610,206	100시간 돌파!	fill=#4040c0;edge=#ffffff;shadow=1;erase=boxes;boxes=30,92,460,146|556,92,612,146|U460,92,556,148|30,146,460,196|556,146,612,196;cbox=460,148,556,190;ecol=#4040c0,#5050d0,#3030b0,#ffffff,#6060e0;th=100;align=l;font=eb;size=58;keep=460,148,566,216;kcol=#4040c0,#5050d0,#3030b0,#ffffff,#6060e0;kth=110
-0078_00_000	38,284,420,376	이번 플레이로 비행 시간이⏎100시간을 넘었습니다.⏎축하합니다.	fill=#3030a0;edge=#ffffff;shadow=0;erase=inpaint;th=50;align=l;font=b;size=18;lh=30
 0004_00_002	154,1,218,33	협력	fill=auto;edge=none;shadow=0;erase=clear;align=c;font=b;size=24
+#비행 시간 돌파(0076~0078): 글자 화소 지우고 push-pull 로 바탕 메움(pp), 캐릭터 머리(kd)는 글자 앞으로 되돌림, 원문식 흰 테두리 3 px + 단색 그림자
+0076_00_000	20,28,625,200		fill=#ffffff;edge=none;shadow=0;erase=pp;tc=#ff7102,#8c1e1a;wt=250;kd=466,200,48;dither=1;dil=17
+0076_00_000	30,286,412,378		fill=#ffffff;edge=none;shadow=0;erase=pp;tc=#8c1e1a;wt=250;dither=1;dil=17
+0076_00_000	34,30,300,94	비행 시간	fill=#ffffff;edge=#ff7102;ew=2;sc=#8c1e1a;so=3;erase=none;align=l;font=eb;size=50
+0076_00_000	80,92,622,196	30시간 돌파!	fill=#ff7102;edge=#ffffff;ew=3;sc=#8c1e1a;so=4;erase=none;align=l;font=eb;size=74;kd=466,200,48
+0076_00_000	36,290,420,376	이번 플레이로 비행 시간이⏎30시간을 넘었습니다.⏎축하합니다.	fill=#8c1e1a;edge=#ffffff;ew=2;shadow=0;erase=none;align=l;font=eb;size=23;lh=28
+0077_00_000	20,28,625,200		fill=#ffffff;edge=none;shadow=0;erase=pp;tc=#0dc64e,#135724;wt=250;kd=558,200,48;dither=1;dil=17
+0077_00_000	30,286,412,378		fill=#ffffff;edge=none;shadow=0;erase=pp;tc=#025916;wt=250;dither=1;dil=17
+0077_00_000	34,30,300,94	비행 시간	fill=#ffffff;edge=#0dc64e;ew=2;sc=#135724;so=3;erase=none;align=l;font=eb;size=50
+0077_00_000	80,92,622,196	50시간 돌파!	fill=#0dc64e;edge=#ffffff;ew=3;sc=#135724;so=4;erase=none;align=l;font=eb;size=74;kd=558,200,48
+0077_00_000	36,290,420,376	이번 플레이로 비행 시간이⏎50시간을 넘었습니다.⏎축하합니다.	fill=#025916;edge=#ffffff;ew=2;shadow=0;erase=none;align=l;font=eb;size=23;lh=28
+0078_00_000	20,28,625,200		fill=#ffffff;edge=none;shadow=0;erase=pp;tc=#5b5eca,#204266;wt=250;kd=510,203,47;dither=1;dil=17
+0078_00_000	30,286,412,378		fill=#ffffff;edge=none;shadow=0;erase=pp;tc=#013870;wt=250;dither=1;dil=17
+0078_00_000	34,30,300,94	비행 시간	fill=#ffffff;edge=#5b5eca;ew=2;sc=#204266;so=3;erase=none;align=l;font=eb;size=50
+0078_00_000	26,92,622,196	100시간 돌파!	fill=#5b5eca;edge=#ffffff;ew=3;sc=#204266;so=4;erase=none;align=l;font=eb;size=74;kd=510,203,47
+0078_00_000	36,290,420,376	이번 플레이로 비행 시간이⏎100시간을 넘었습니다.⏎축하합니다.	fill=#013870;edge=#ffffff;ew=2;shadow=0;erase=none;align=l;font=eb;size=23;lh=28

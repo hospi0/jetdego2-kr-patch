@@ -13,7 +13,8 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE);
 import cmp3, gspkt
 FONTS = {'eb': r'C:\claude\utils\font\nanum-gothic\NanumGothicExtraBold.ttf',
          'b': r'C:\claude\utils\font\nanum-gothic\NanumGothicBold.ttf',
-         'm': r'C:\claude\utils\font\nanum-myeongjo\NanumMyeongjoBold.ttf'}
+         'm': r'C:\claude\utils\font\nanum-myeongjo\NanumMyeongjoBold.ttf',
+         'g9': r'C:\claude\utils\font\Galmuri-v2.40.3\Galmuri9.ttf'}
 SPEC = os.path.join(ROOT, 'work', 'gfx', 'gfx.tsv')
 _blk = {}
 
@@ -114,6 +115,19 @@ def render(img, box, text, st):
             reg = out[y, x0:x1]
             vals, cnt = np.unique(reg, axis=0, return_counts=True)
             out[y, x0:x1] = vals[cnt.argmax()]
+    elif st['erase'] == 'cc':                           # 단색 바탕: cy 줄 위는 전부 바탕색, 아래는 cy+3 밑까지 내려가는 덩어리(바로 밑 로마자)만 살림
+        import cv2
+        reg = out[y0:y1, x0:x1].reshape(-1, 4)
+        vals, cnt = np.unique(reg, axis=0, return_counts=True); bgc = vals[cnt.argmax()]
+        cy = int(st['cy']) - y0
+        out[y0:y0 + cy, x0:x1] = bgc
+        fg = (np.abs(out[y0 + cy:y1, x0:x1].astype(int) - bgc.astype(int)).sum(-1) > int(st.get('th', '30'))).astype(np.uint8)
+        n, lab, stats, _ = cv2.connectedComponentsWithStats(fg, connectivity=8)
+        for i in range(1, n):
+            if stats[i, 1] + stats[i, 3] - 1 < 3:
+                out[y0 + cy:y1, x0:x1][lab == i] = bgc
+    elif st['erase'] == 'pp':                           # 부드러운 바탕(보케) 위 큰 글자: 글자 화소 마스크 → 둘레 바탕으로 push-pull 메움
+        out[..., :3] = erase_pp(out[..., :3], (x0, y0, x1, y1), st, _keep_mask(img, st))
     elif st['erase'] == 'fill':                         # 단색 칸: 상자 안 가장 흔한 색으로 칠함
         reg = out[y0:y1, x0:x1].reshape(-1, 4)
         vals, cnt = np.unique(reg, axis=0, return_counts=True)
@@ -135,6 +149,12 @@ def render(img, box, text, st):
                 hit |= np.abs(sub - np.array(c)).sum(-1) < int(st.get('th', '90'))
             m = np.zeros(rgb.shape[:2], np.uint8); m[y0:y1, x0:x1] = hit[y0:y1, x0:x1] * 255
             mask = cv2.dilate(m, np.ones((5, 5), np.uint8))
+            mask[:y0] = 0; mask[y1:] = 0; mask[:, :x0] = 0; mask[:, x1:] = 0
+        elif st['erase'] == 'wd':                       # 흰 몸(min≥wt)+검은 테두리(max≤dt) 화소만 — 사진 위 테두리 글자
+            sub = rgb.astype(int)
+            hit = (sub.min(-1) >= int(st.get('wt', '190'))) | (sub.max(-1) <= int(st.get('dt', '80')))
+            m = np.zeros(rgb.shape[:2], np.uint8); m[y0:y1, x0:x1] = hit[y0:y1, x0:x1] * 255
+            mask = cv2.dilate(m, np.ones((3, 3), np.uint8))
             mask[:y0] = 0; mask[y1:] = 0; mask[:, :x0] = 0; mask[:, x1:] = 0
         elif st['erase'] == 'bright':                   # 밝은 글자(흰 글씨)만 — 어두운 사진 바탕
             lum = rgb.astype(int).sum(-1) // 3
@@ -170,12 +190,16 @@ def render(img, box, text, st):
     # 글자
     core, core2 = layout(W, H, text, st, both=True)
     a = np.zeros((H, W, 4), np.float32)
-    if st['shadow'] == '1':
+    if st.get('sc'):                                    # 원문식 그림자: 테두리째 so px 오른쪽 아래로 민 단색
+        so = int(st.get('so', '3'))
+        shape = np.asarray(Image.fromarray((core * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(2 * int(st.get('ew', '1')) + 1)), np.float32) / 255
+        a = comp(a, hexc(st['sc']), np.roll(np.roll(shape, so, 0), so, 1))
+    elif st['shadow'] == '1':
         sh = np.roll(np.roll(core, 2, 0), 2, 1)
         sh = np.asarray(Image.fromarray((sh * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.2)), np.float32) / 255
         a = comp(a, (20, 20, 30), sh * 0.7)
     if edge:
-        ring = np.asarray(Image.fromarray((core * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(3)), np.float32) / 255
+        ring = np.asarray(Image.fromarray((core * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(2 * int(st.get('ew', '1')) + 1)), np.float32) / 255
         a = comp(a, edge, ring)
     a = comp(a, fill, core)
     if core2.any():                                   # {…} 강조색
@@ -185,6 +209,9 @@ def render(img, box, text, st):
     rgb = a[..., :3] * al + base[..., :3] * (1 - al)
     alpha = np.maximum(base[..., 3:4], al * 255)
     out[y0:y1, x0:x1] = np.concatenate([rgb, alpha], -1).clip(0, 255).astype(np.uint8)
+    if st.get('kd'):                                    # 글자 앞 캐릭터 머리(kd 덩어리)는 원본 화소로 되돌림
+        K = _keep_mask(img, st)
+        out[K] = img[K]
     if st.get('keep'):                                  # 앞에 있던 물체(캐릭터)는 원본 화소로 되돌림: keep 상자 안 + 글자색(kcol)에서 먼 화소
         kx0, ky0, kx1, ky1 = map(int, st['keep'].split(','))
         orig = img[ky0:ky1, kx0:kx1].astype(int)
@@ -196,6 +223,74 @@ def render(img, box, text, st):
     return out
 
 
+def _keep_mask(img, st):
+    """kd=cx,cy,r : 얼굴 점(cx,cy)에서 이어진 머리(어두운 색)·피부 덩어리, 반지름 r+8 안 — 구멍 채움·1 px 늘림"""
+    if not st.get('kd'):
+        return np.zeros(img.shape[:2], bool)
+    import cv2
+    cx, cy, r = map(int, st['kd'].split(','))
+    c = img[..., :3].astype(int); lum = c.sum(-1) // 3
+    skin = (c[..., 0] > 225) & (c[..., 1] > 180) & (c[..., 1] < 228) & (c[..., 2] > 110) & (c[..., 2] < 170)
+    cand = ((lum < 60) | skin).astype(np.uint8)
+    yy, xx = np.mgrid[:c.shape[0], :c.shape[1]]
+    cand[(xx - cx) ** 2 + (yy - cy) ** 2 > (r + 8) ** 2] = 0
+    n, lab = cv2.connectedComponents(cand, connectivity=8)
+    K = lab == lab[cy, cx] if lab[cy, cx] else np.zeros(cand.shape, bool)
+    inv = (~K).astype(np.uint8); ff = inv.copy(); h, w = ff.shape
+    cv2.floodFill(ff, np.zeros((h + 2, w + 2), np.uint8), (0, 0), 2)
+    K = K | (ff == 1)                                   # 바깥과 안 이어진 빈 곳(눈·머리핀 안쪽) = 구멍
+    return cv2.dilate(K.astype(np.uint8), np.ones((3, 3), np.uint8)).astype(bool)
+
+
+def _pushpull(rgb, valid):
+    """valid 아닌 곳을 둘레 값의 가중 평균 피라미드로 메움(부드러운 바탕용)"""
+    import cv2
+    w = valid.astype(np.float32); v = rgb.astype(np.float32) * w[..., None]
+    pyr = [(v, w)]
+    while min(pyr[-1][1].shape) > 4:
+        v, w = pyr[-1]
+        h2, w2 = (w.shape[0] + 1) // 2, (w.shape[1] + 1) // 2
+        pyr.append((cv2.resize(v, (w2, h2), interpolation=cv2.INTER_AREA), cv2.resize(w, (w2, h2), interpolation=cv2.INTER_AREA)))
+    v, w = pyr[-1]; cur = v / np.maximum(w, 1e-6)[..., None]
+    for v, w in reversed(pyr[:-1]):
+        up = cv2.resize(cur, (w.shape[1], w.shape[0]), interpolation=cv2.INTER_LINEAR)
+        own = v / np.maximum(w, 1e-6)[..., None]; a = np.clip(w * 4, 0, 1)[..., None]
+        cur = own * a + up * (1 - a)
+    return cur
+
+
+def erase_pp(rgb, box, st, K):
+    """box 안 글자 화소(몸색 tc·흰색·그림자색 + 바탕 추정과 다른 화소)를 지우고 바탕을 메움. K(캐릭터)는 건드리지 않음"""
+    import cv2
+    x0, y0, x1, y1 = box; H, W = rgb.shape[:2]
+    c = rgb.astype(int)
+    M = np.zeros((H, W), bool)
+    for col in st.get('tc', '').split(','):
+        if col: M |= np.abs(c - np.array(hexc(col))).sum(-1) < int(st.get('th', '90'))
+    M |= c.min(-1) >= int(st.get('wt', '235'))
+    inb = np.zeros((H, W), bool); inb[y0:y1, x0:x1] = True
+    M &= inb
+    dil = int(st.get('dil', '11'))
+    M = cv2.dilate(M.astype(np.uint8), np.ones((dil, dil), np.uint8)).astype(bool) & inb
+    for _ in range(3):                                   # 바탕 추정과 다른 화소(테두리 번짐) 더함
+        bg = _pushpull(rgb, ~(M | K))
+        d = np.abs(c - bg).sum(-1) > int(st.get('dth', '18'))
+        M |= cv2.dilate((d & inb).astype(np.uint8), np.ones((3, 3), np.uint8)).astype(bool) & inb
+        M &= ~K
+    bg = _pushpull(rgb, ~(M | K))
+    F = M | K                                           # 조화 보간: 경계 값에 매끄럽게 이어지게(이음매 없음). 캐릭터 자리도 비워 두고 풀어 머리색이 번지지 않게
+    ys, xs = np.nonzero(M)
+    if len(ys):
+        a0, a1, b0, b1 = max(ys.min() - 1, 0), min(ys.max() + 2, H), max(xs.min() - 1, 0), min(xs.max() + 2, W)
+        f = np.where(F[..., None], bg, rgb.astype(np.float32))[a0:a1, b0:b1].copy(); m = F[a0:a1, b0:b1]
+        for _ in range(int(st.get('it', '600'))):
+            avg = (np.roll(f, 1, 0) + np.roll(f, -1, 0) + np.roll(f, 1, 1) + np.roll(f, -1, 1)) / 4
+            f[m] = avg[m]
+        bg[a0:a1, b0:b1] = f
+    out = rgb.copy(); out[M] = np.clip(bg[M], 0, 255).astype(np.uint8)
+    return out
+
+
 def cv2_erode(m):
     import cv2
     return cv2.morphologyEx(m.astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8)).astype(bool)
@@ -203,7 +298,23 @@ def cv2_erode(m):
 
 def layout(W, H, text, st, both=False):
     """상자 W×H 에 글자 그린 0‥1 배열 — ⏎ 줄바꿈(줄 간격 lh px), 넘치면 가로만 줄임, 세로 가운데. {…} = 강조(both=True 면 강조 글자만 따로)"""
-    S = 4; lines = text.split('⏎'); n = len(lines)
+    lines = text.split('⏎'); n = len(lines)
+    if st.get('px'):                                    # 도트 글꼴(갈무리): 원래 크기·안티에일리어싱 없음, sp = 띄어쓰기 폭 px, dy = 세로 보정
+        font = ImageFont.truetype(FONTS[st['font']], int(st['size'])); lh = int(st.get('lh', '0')) or H // n
+        lay = Image.new('L', (W, H)); d = ImageDraw.Draw(lay); d.fontmode = '1'
+        top = (H - lh * n) // 2; pad = int(st['pad']); sp = st.get('sp')
+        asc, desc = font.getmetrics()
+        for i, ln in enumerate(lines):
+            words = ln.split(' ') if sp else [ln]
+            tw = sum(font.getlength(w) for w in words) + (int(sp) * (len(words) - 1) if sp else 0)
+            if tw > W - 2 * pad: print('폭 넘침(px)', ln, tw, '>', W - 2 * pad)
+            x = {'l': pad, 'c': (W - tw) / 2, 'r': W - tw - pad}[st['align']]
+            yy = top + i * lh + (lh - (asc + desc)) // 2 + int(st.get('dy', '0'))
+            for w in words:
+                d.text((round(x), yy), w, 255, font=font); x += font.getlength(w) + (int(sp) if sp else 0)
+        core = np.asarray(lay, np.float32) / 255
+        return (core, np.zeros_like(core)) if both else core
+    S = 4
     lay2 = Image.new('L', (W * S, H * S)); d2 = ImageDraw.Draw(lay2)
     lh = int(st.get('lh', '0')) or H // n
     size = int(st['size']) or int(lh * 0.82); pad = int(st['pad'])
@@ -274,8 +385,23 @@ def comp(a, col, m):
     return np.concatenate([rgb, al], -1)
 
 
-def quantize(img, pal, box, idx):
+def quantize(img, pal, box, idx, dither=False):
     x0, y0, x1, y1 = box
+    if dither:                                          # 오차 확산(불투명 그림): 팔레트 색 그대로인 화소는 오차 0 이라 안 바뀜, 메운 매끄러운 색만 퍼짐
+        reg = img[y0:y1, x0:x1, :3].astype(np.float32).copy(); P = pal[:, :3].astype(np.float32)
+        h, w = reg.shape[:2]; best = np.zeros((h, w), np.int32)
+        for y in range(h):
+            for x in range(w):
+                v = reg[y, x]; i = int((((P - v) * np.array([1, 1.2, 0.8])) ** 2).sum(-1).argmin()); best[y, x] = i
+                e = v - P[i]
+                if not e.any(): continue
+                if x + 1 < w: reg[y, x + 1] += e * 7 / 16
+                if y + 1 < h:
+                    if x > 0: reg[y + 1, x - 1] += e * 3 / 16
+                    reg[y + 1, x] += e * 5 / 16
+                    if x + 1 < w: reg[y + 1, x + 1] += e * 1 / 16
+        idx[y0:y1, x0:x1] = best
+        return idx
     reg = img[y0:y1, x0:x1].astype(np.float32); P = pal.astype(np.float32)
     w = np.array([1, 1.2, 0.8, 1.5], np.float32)
     dist = (((reg[:, :, None, :] - P[None, None]) * w) ** 2).sum(-1)
@@ -330,7 +456,7 @@ def jobs():
             for b in (st.get('boxes', '').split('|') if st.get('boxes') else []) + ([st['cbox']] if st.get('cbox') else []):
                 bb = list(map(int, b.lstrip('U').split(',')))
                 ub = [min(ub[0], bb[0]), min(ub[1], bb[1]), max(ub[2], bb[2]), max(ub[3], bb[3])]
-            idx2 = quantize(new, pal, tuple(ub), idx.copy())
+            idx2 = quantize(new, pal, tuple(ub), idx.copy(), dither=bool(st.get('dither')))
         out[(k, j)] = store(d, u, idx2)
         prev.append((name, img, pal[idx2]))
     return out, prev

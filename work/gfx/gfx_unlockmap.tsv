@@ -1,0 +1,59 @@
+#그림	상자	한글	꼴 — 시각표 해금 배너(0069~0072) 지도 도시 이름: 흰 몸+검은 테두리 화소만 지우고(wd) 넓은 칸에 다시 씀
+0069_00_000	514,136,555,158		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0069_00_000	307,178,348,200		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0069_00_000	413,252,454,273		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0069_00_000	311,245,372,265		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0069_00_000	253,224,294,244		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0069_00_000	72,222,112,243		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0069_00_000	32,297,78,320		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0069_00_000	484,134,584,160	삿포로	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0069_00_000	277,176,377,202	코마츠	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0069_00_000	383,249,483,275	도쿄	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0069_00_000	291,242,391,268	나고야	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0069_00_000	223,221,323,247	간사이	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0069_00_000	42,219,142,245	후쿠오카	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0069_00_000	5,295,105,321	오키나와	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0070_00_000	514,136,555,158		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0070_00_000	307,178,348,200		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0070_00_000	220,193,264,217		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0070_00_000	72,222,112,243		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0070_00_000	162,214,203,235		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0070_00_000	253,224,294,244		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0070_00_000	311,245,372,265		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0070_00_000	413,252,454,273		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0070_00_000	32,297,78,320		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0070_00_000	484,134,584,160	삿포로	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0070_00_000	277,176,377,202	코마츠	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0070_00_000	192,192,292,218	이타미	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0070_00_000	42,219,142,245	후쿠오카	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0070_00_000	132,211,232,237	히로시마	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0070_00_000	223,221,323,247	간사이	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0070_00_000	291,242,391,268	나고야	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0070_00_000	383,249,483,275	도쿄	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0070_00_000	5,295,105,321	오키나와	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0071_00_000	514,136,555,158		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0071_00_000	413,252,454,273		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0071_00_000	253,224,294,244		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0071_00_000	220,193,264,217		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0071_00_000	72,222,112,243		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0071_00_000	32,297,78,320		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0071_00_000	484,134,584,160	삿포로	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0071_00_000	383,249,483,275	도쿄	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0071_00_000	223,221,323,247	간사이	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0071_00_000	192,192,292,218	이타미	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0071_00_000	42,219,142,245	후쿠오카	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0071_00_000	5,295,105,321	오키나와	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0072_00_000	514,136,555,158		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0072_00_000	307,178,348,200		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0072_00_000	413,252,454,273		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0072_00_000	253,224,294,244		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0072_00_000	162,214,203,235		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0072_00_000	72,222,112,243		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0072_00_000	32,297,78,320		fill=#ffffff;edge=none;shadow=0;erase=wd;wt=190;dt=80;align=c;font=b;size=18
+0072_00_000	484,134,584,160	삿포로	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0072_00_000	277,176,377,202	코마츠	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0072_00_000	383,249,483,275	도쿄	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0072_00_000	223,221,323,247	간사이	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0072_00_000	132,211,232,237	히로시마	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0072_00_000	42,219,142,245	후쿠오카	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18
+0072_00_000	5,295,105,321	오키나와	fill=#ffffff;edge=#101010;ew=2;shadow=0;erase=none;align=c;font=eb;size=18

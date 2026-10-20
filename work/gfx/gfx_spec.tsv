@@ -1,157 +1,157 @@
 #그림	상자	한글	꼴 — 기체 제원 카드(gen_spec.py 로 생성)
-0017_03_002	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,110,53,124	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,124,64,137	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_002	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_002	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_004	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,110,53,123	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,124,64,137	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_004	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_004	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_006	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,110,53,123	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,124,64,136	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_006	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_006	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_008	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,110,53,123	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,124,64,136	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_008	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_008	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_010	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,110,53,123	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,124,64,137	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	9,177,42,190	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_010	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_010	105,177,117,190	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_012	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,110,53,123	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,124,64,136	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_012	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_012	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_012	103,177,115,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_014	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,110,53,123	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,124,64,136	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_014	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_014	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_016	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,110,53,123	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,124,64,136	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_016	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_016	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_018	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,84,32,96	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,110,53,124	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,124,64,137	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_018	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_018	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_020	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,110,53,123	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,124,64,136	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_020	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_020	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_022	9,32,32,44	전폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,45,32,57	전장	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,58,32,70	전고	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,71,64,83	수평미익 폭	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,84,32,97	주익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,98,42,110	보조익	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,110,53,123	플랩	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,124,64,137	수평안정판	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,137,53,149	순항 속도	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,150,53,162	엔진	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,164,75,176	운항 승무원	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	9,177,42,189	승객 수	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=l;font=b;size=10
-0017_03_022	84,164,96,176	명	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_022	65,177,77,189	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
-0017_03_010	66,177,78,190	석	fill=#f0f0f0;edge=none;shadow=0;erase=fill;align=c;font=b;size=10
+0017_03_002	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,110,53,124	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,124,64,137	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_002	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_002	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_002	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_004	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,110,53,123	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,124,64,137	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_004	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_004	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_004	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_006	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,110,53,123	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,124,64,136	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_006	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_006	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_006	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_008	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,110,53,123	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,124,64,136	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_008	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_008	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_008	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_010	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,110,53,123	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,124,64,137	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_010	9,177,42,190	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_010	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_010	105,177,117,190	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_012	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,110,53,123	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,124,64,136	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_012	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_012	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_012	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_012	103,177,115,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_014	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,110,53,123	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,124,64,136	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_014	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_014	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_014	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_016	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,110,53,123	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,124,64,136	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_016	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_016	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_016	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_018	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,84,32,96	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,110,53,124	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,124,64,137	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_018	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_018	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_018	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_020	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,110,53,123	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,124,64,136	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_020	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_020	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_020	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_022	9,32,32,44	전폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,45,32,57	전장	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,58,32,70	전고	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,71,64,83	수평미익 폭	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,84,32,97	주익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,98,42,110	보조익	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,110,53,123	플랩	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,124,64,137	수평안정판	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,137,53,149	순항 속도	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,150,53,162	엔진	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,164,75,176	운항 승무원	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0
+0017_03_022	9,177,42,189	승객 수	fill=#ffffff;edge=none;shadow=0;erase=fill;align=l;font=g9;size=10;px=1;pad=0;sp=2
+0017_03_022	86,164,97,176	명	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_022	65,177,77,189	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
+0017_03_010	66,177,78,190	석	fill=#ffffff;edge=none;shadow=0;erase=fill;align=c;font=g9;size=10;px=1;pad=0
