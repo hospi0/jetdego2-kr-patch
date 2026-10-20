@@ -51,3 +51,8 @@
 - `tools/build.py` : 메시지(work/trans/msg_<시트>.tsv) + 그림(`tools/gfx.py`, work/gfx/gfx.tsv) → LZSS 재압축(`tools/lzss.py` = 다크 세이비어 것) → 블록 제자리(넘치면 디스크 끝 덧붙임 — 아직 실기 미확인) → work/build/Jet de Go! 2 (Japan) KR.iso.
 - ISO 에 UDF 다리 있음 → 파일 옮기기 대신 디스크 끝 덧붙임 방식.
 - 그림 도구 gfx.py: 투명 바탕 = clear, 사진 바탕 = inpaint(글자 화소만), 밝기=알파 팔레트(제목 띠 0021) = mode=idx(색인 직접).
+
+## 그림 진행 (2026-10-20 끝)
+- ✅ A(77)·B(14)·G(25)·**H 전부(3032~3128)** — ★3088~3128 은 «JAL 역사 앨범» 41장(위 표의 I 는 3129~ 가 아님, 확인 필요). 원고 work/gfx/src_jalalbum.txt → `tools/gen_jalalbum.py` → gfx_jalalbum.tsv(아래 문장 = 나눔고딕 볼드 14·줄 18, 오른쪽 문장 9장, 필름 띠 昭·和·年 → 쇼·와·년 명조 볼드). 감수 표기 gfx_credit.tsv · 기념품 머리 띠 gfx_gift.tsv(fill 지우기).
+- 미리보기는 원래 크기(원본|새것) work/gfx/prev_jal — ⛔3배 미리보기·고배율 확대 반복 금지(전 세션 뻗음).
+- ⏳남음: D 기체 앨범 239 · E 기념품 사진 178 · F 기념품 카드 134 · 3129~3149 · J. 시험 ISO 는 00:23 빌드(그림 전부 빠짐) → 재빌드 필요.
