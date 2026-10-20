@@ -64,13 +64,26 @@ class Jet2:
     def block(self, k):
         self.f.seek(cmp3.BASE + self.offs[k]); return self.f.read(self.offs[k + 1] - self.offs[k])
 
+    def _ptrname(self, k):
+        rec = self.st[self.offs[k] // 2048]
+        o = struct.unpack_from('<I', self.elf, rec + 24)[0] - VA0 + FO0
+        return self.elf[o:o + 64].split(b';')[0].decode().lower().replace(chr(92), '/').lstrip('/')
+
     def desc_of(self, k):
+        """블록 → ELF 디렉터리: 크기(섹터표 크기 = 디렉터리 전체 크기)·머리 시각·항목 위치가 맞는 것.
+        여럿이면 이름 = 앞 블록 섹터표 포인터의 파일 이름(디렉터리 이름이 한 칸 밀려 있음, 2026-10-20 실측)
+        ⛔예전엔 시각·항목 배치만 봐서 생김새 같은 블록 둘(3051·3052 등 48쌍)이 한 디렉터리로 묶여 크래시"""
         blk = self.block(k); ts = blk[8:12]
+        s0 = struct.unpack_from('<I', self.elf, self.st[self.offs[k] // 2048] + 16)[0]
         es, _ = cmp3.entries(blk)
-        for d in self.desc:
-            if d['ts'] == ts and d['n'] >= len(es) and all(d['ents'][i][0] == es[i][0] and d['ents'][i][2] == es[i][1] for i in range(len(es))):
-                return d
-        raise KeyError('블록 %d 의 ELF 디렉터리 못 찾음' % k)
+        def ok(d):
+            return d['n'] >= len(es) and all(d['ents'][i][0] == es[i][0] and d['ents'][i][2] == es[i][1] for i in range(len(es)))
+        c = [d for d in self.desc if d['size'] == s0 and d['ts'] == ts and ok(d)]
+        if len(c) > 1 and k > 0:
+            c = [d for d in c if d['name'].lower() == self._ptrname(k - 1)] or c
+        if len(c) != 1:
+            raise KeyError('블록 %d 의 ELF 디렉터리 %d개' % (k, len(c)))
+        return c[0]
 
 
 # ---------------- 글자 그리기 ----------------

@@ -24,39 +24,39 @@
 0017_07_010	band:1	증편	fill=auto;edge=auto;shadow=0
 0017_07_010	band:2	환승편	fill=auto;edge=auto;shadow=0
 #화면 제목 띠 오른쪽 일본어(줄 40 px) — 팔레트 밝기=알파 → 색인 직접(몸 0·테두리 E)
-0021_00_002	298,6,459,38	평가	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_002	298,46,459,78	플라이트 로그북	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_002	311,86,459,118	운항 평가	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,6,459,38	파일럿 등록	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,46,459,78	브리핑	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,86,459,118	계정 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,126,459,158	모드 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,166,459,198	시나리오 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,206,459,238	기체 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,246,459,278	공항 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,286,459,318	레슨 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,326,459,358	연습	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,366,459,398	기체 스펙	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_003	298,406,459,438	기체 설명	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,6,459,38	좌석 배치	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,46,459,78	앨범	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,86,459,118	안전 안내서	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,126,459,158	옵션	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,166,459,198	게임 옵션	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,206,459,238	컨트롤러	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,246,459,278	키 설정	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,286,459,318	사운드 테스트	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,326,459,358	저장/불러오기	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	298,366,459,398	프리미엄	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_004	308,406,459,438	일본항공의 역사	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_005	298,6,459,38	영상	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_005	298,46,459,78	공항 안내	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_005	298,86,459,118	공항 개요	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_005	298,126,459,158	공항 상공도	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_005	298,166,459,198	매장 소개	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_005	298,206,459,238	추천 상품	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_005	298,246,459,278	캘리브레이션	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
-0021_00_005	298,286,459,318	계기 설명	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22
+0021_00_002	415,6,459,38	평가	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_002	308,46,459,78	플라이트 로그북	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_002	380,86,459,118	운항 평가	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	333,6,459,38	파일럿 등록	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	344,46,459,78	브리핑	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	317,86,459,118	계정 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	338,126,459,158	모드 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	321,166,459,198	시나리오 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	349,206,459,238	기체 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	351,246,459,278	공항 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	325,286,459,318	레슨 선택	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	413,326,459,358	연습	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	340,366,459,398	기체 스펙	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_003	376,406,459,438	기체 설명	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	379,6,459,38	좌석 배치	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	381,46,459,78	앨범	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	340,86,459,118	안전 안내서	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	370,126,459,158	옵션	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	313,166,459,198	게임 옵션	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	360,206,459,238	컨트롤러	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	334,246,459,278	키 설정	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	340,286,459,318	사운드 테스트	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	345,326,459,358	저장/불러오기	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	369,366,459,398	프리미엄	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_004	326,406,459,438	일본항공의 역사	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_005	379,6,459,38	영상	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_005	375,46,459,78	공항 안내	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_005	375,86,459,118	공항 개요	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_005	356,126,459,158	공항 상공도	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_005	380,166,459,198	매장 소개	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_005	340,206,459,238	추천 상품	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_005	303,246,459,278	캘리브레이션	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
+0021_00_005	376,286,459,318	계기 설명	mode=idx;ramp=0,1,5,8,a,c;edge=e;soft=d;align=r;size=22;sq=1
 #파일럿 등록 — 입력 방식 버튼·성별(안쪽 투명, 틀 안만)
 0054_01_008	4,4,154,29	히라가나	fill=auto;edge=none;shadow=0;size=22
 0054_01_010	4,4,154,29	가타카나	fill=auto;edge=none;shadow=0;size=22
